@@ -1,24 +1,66 @@
-# README
+# E-Commerce App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> An App that creates an Authors as well as books.
 
-Things you may want to cover:
 
-* Ruby version
+## Built With
 
-* System dependencies
+- Major languages: Ruby
+- Frameworks: Rails
 
-* Configuration
+## Live Demo
 
-* Database creation
+[Under Construction](https://livedemo.com)
 
-* Database initialization
 
-* How to run the test suite
+## Getting Started
 
-* Services (job queues, cache servers, search engines, etc.)
+**This is an example of how you may give instructions on setting up your project locally.**
+**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
 
-* Deployment instructions
 
-* ...
+To get a local copy up and running follow these simple example steps.
+
+### Install
+
+```
+run 'bundle install'
+```
+
+### Run tests
+
+```
+Type 'rails test' in the console to run all tests
+```
+Or
+
+```
+Type 'ruby test/../..' to an specific test
+```
+
+## Authors
+
+👤 **Christian Erick Contreras**
+
+- GitHub: [@eri8-9](https://github.com/eri8-9)
+- Linkedin: [LinkedIn](https://www.linkedin.com/in/christian-erick/)
+- Twitter: [@ChristianErick_](https://twitter.com/ChristianErick_)
+
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Microverse
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
