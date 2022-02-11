@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   namespace :admin do
     get 'author/new'
     get 'author/create'
+    post 'author/create'
     get 'author/edit'
     get 'author/update'
     get 'author/destroy'
