@@ -1,4 +1,15 @@
 class Admin::AuthorController < ApplicationController
+  def index
+    # @authors = Author.find(:all)
+    @authors = Author.all.order(created_at: :desc)
+    @page_title = 'Listing authors'
+  end
+
+  def show
+    @author = Author.find(params[:id])
+    @page_title = @author.name
+  end
+
   def new
     @author = Author.new
     @page_title = 'Create new author'
@@ -21,10 +32,6 @@ class Admin::AuthorController < ApplicationController
   def update; end
 
   def destroy; end
-
-  def show; end
-
-  def index; end
 
   private
 

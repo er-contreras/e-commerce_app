@@ -1,5 +1,6 @@
 require './test/test_helper'
 # require 'admin/author_controller'
+# fixtures :authors
 
 class Admin::AuthorControllerTest < ActionDispatch::IntegrationTest
   # def setup
@@ -38,4 +39,20 @@ class Admin::AuthorControllerTest < ActionDispatch::IntegrationTest
       assert_select 'div', attributes: { class: 'fieldWithErrors' }
     end
   end
+
+  def test_index
+    get admin_author_index_url
+    assert_response :success
+    assert_select 'table', children: { count: Author.count + 1, only: { tag: 'tr ' } }
+    Author.all.each do |a|
+      assert_select 'td', content: a.last_name
+    end
+  end
+
+  # def test_show
+  #   get admin_author_show_url
+  #   assert_response :success
+  #   assert_equal 'Joel', assigns(:author).first_name
+  #   assert_equal 'Spolsky', assigns(:author).last_name
+  # end
 end
