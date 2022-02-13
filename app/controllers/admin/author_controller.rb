@@ -27,9 +27,24 @@ class Admin::AuthorController < ApplicationController
     end
   end
 
-  def edit; end
+  def edit
+    @author = Author.find(params[:id])
+    @page_title = 'Edit author'
+  end
 
-  def update; end
+  def update
+    # raise params.inspect
+    @author = Author.find(params[:id])
+
+    # first_name: params[:author][:first_name], last_name: params[:author][:last_name]
+    if @author.update(author_params)
+      flash[:notice] = 'Author was successfully updated.'
+      redirect_to action: 'show', id: @author
+    else
+      @page_title = 'Edit author'
+      render action: 'edit'
+    end
+  end
 
   def destroy; end
 

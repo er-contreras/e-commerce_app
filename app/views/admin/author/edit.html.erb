@@ -1,2 +1,7 @@
-<h1>Admin::Author#edit</h1>
-<p>Find me in app/views/admin/author/edit.html.erb</p>
+<%= form_tag admin_author_url, method: :put do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag 'Edit' %>
+<% end %>
+
+<%= link_to 'Show', :action => 'show', :id => @author %>
+<%= link_to 'Back', :action => 'index' %>
