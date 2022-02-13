@@ -49,10 +49,24 @@ class Admin::AuthorControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
-  # def test_show
-  #   get admin_author_show_url
-  #   assert_response :success
-  #   assert_equal 'Joel', assigns(:author).first_name
-  #   assert_equal 'Spolsky', assigns(:author).last_name
+  # def test_fixture
+  #   # q = authors(:joel_spolsky)
+  #   authors.each do |q|
+  #     assert q.valid?, q.errors.full_messages.inspect
+  #   end
   # end
+
+  def test_show
+    # get '/admin/author/show', params: { id: 1 }
+    # assert_response :success
+    # assert_equal 'Joel', assigns(:author).first_name
+    # assert_equal 'Spolsky', assigns(:author).last_name
+
+    author = authors(:joel_spolsky)
+    get admin_author_show_url, params: { id: author.id }
+
+    assert_response :success
+    assert_equal 'Joel', author.first_name
+    assert_equal 'Spolsky', author.last_name
+  end
 end
