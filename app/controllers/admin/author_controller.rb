@@ -36,7 +36,7 @@ class Admin::AuthorController < ApplicationController
     # raise params.inspect
     @author = Author.find(params[:id])
 
-    # first_name: params[:author][:first_name], last_name: params[:author][:last_name]
+    # author_params == first_name: params[:author][:first_name], last_name: params[:author][:last_name]
     if @author.update(author_params)
       flash[:notice] = 'Author was successfully updated.'
       redirect_to action: 'show', id: @author
@@ -46,7 +46,12 @@ class Admin::AuthorController < ApplicationController
     end
   end
 
-  def destroy; end
+  def destroy
+    @author = Author.find(params[:id])
+    flash[:notice] = "Successfully deleted author #{@author.name}"
+    @author.delete
+    redirect_to action: 'index'
+  end
 
   private
 

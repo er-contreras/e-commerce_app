@@ -78,4 +78,12 @@ class Admin::AuthorControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to action: 'show', id: 1
     assert_equal 'Joseph', Author.find(1).first_name
   end
+
+  def test_destroy
+    assert_difference(Author, :count, -1) do
+      delete '/admin/author/1'
+      assert_response :redirect
+      assert_redirected_to action: 'index'
+    end
+  end
 end
