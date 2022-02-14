@@ -39,7 +39,7 @@ Type 'rails test' in the console to run all tests
 ```
 Or
 ```
-Type 'ruby test/../..' to an specific test
+Type 'ruby test/../..' to a specific test
 ```
 
 ## Authors
