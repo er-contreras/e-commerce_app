@@ -22,18 +22,22 @@
 To get a local copy up and running follow these simple example steps.
 
 ### Install
-
 ```
 run 'bundle install'
 ```
-
+### Create Database
+```
+run 'rails db:create' and 'rails db:migrate'
+```
+### Run Server
+```
+run 'rails server' or a shortcut 'rails s'
+```
 ### Run tests
-
 ```
 Type 'rails test' in the console to run all tests
 ```
 Or
-
 ```
 Type 'ruby test/../..' to an specific test
 ```
