@@ -1,6 +1,6 @@
 # E-Commerce App
 
-> An App that creates an Authors as well as books.
+> An App that creates Authors as well as books.
 
 
 ## Built With
