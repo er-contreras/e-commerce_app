@@ -84,6 +84,8 @@ class Admin::AuthorControllerTest < ActionDispatch::IntegrationTest
       delete '/admin/author/1'
       assert_response :redirect
       assert_redirected_to action: 'index'
+      follow_redirect!
+      assert_select 'div', attributes: { id: 'notice' }, content: 'Successfully deleted author Joel Spolsky'
     end
   end
 end

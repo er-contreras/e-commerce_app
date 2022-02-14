@@ -32,3 +32,8 @@ body {
   align-items: center;
   flex-direction: column;
 }
+
+#notice {
+  padding: 5px;
+  background-color: #96ff88;
+}
