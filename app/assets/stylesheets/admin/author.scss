@@ -4,8 +4,6 @@
 
 table {
   border: 1px solid black;
-  width: 50vw;
-  height: 20vh;
   background-color: rgb(219, 219, 219);
 
   th {
@@ -17,7 +15,6 @@ table {
   td {
     border: 1px solid black;
     font-size: 2rem;
-    // background-color: blue;
     text-align: center;
   }
 }

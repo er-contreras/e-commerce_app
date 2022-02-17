@@ -4,13 +4,6 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-
-joel_spolsky:
+apress:
   id: 1
-  first_name: Joel
-  last_name: Spolsky
-
-jeremy_keith:
-  id: 2
-  first_name: Jeremy
-  last_name: Keith
+  name: Apress
