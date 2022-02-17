@@ -1,4 +1,4 @@
-<%= form_with url: admin_publishers_url do |form| %>
+<%= form_with scope: :publisher, url: admin_publishers_url do |form| %>
   <% if publisher.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(publisher.errors.count, "error") %> prohibited this publisher from being saved:</h2>

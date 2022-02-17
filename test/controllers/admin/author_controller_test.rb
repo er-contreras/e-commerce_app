@@ -20,7 +20,7 @@ class Admin::AuthorControllerTest < ActionDispatch::IntegrationTest
     get new_admin_author_url
     assert_response :success
 
-    assert_difference(Author, :count) do
+    assert_difference('Author.count') do
       # assert_equal 0, Author.find(:all).size
       post admin_author_index_url, params: { author: { first_name: 'Joel', last_name: 'Spolsky' } }
       assert_response :redirect
@@ -32,7 +32,7 @@ class Admin::AuthorControllerTest < ActionDispatch::IntegrationTest
   end
 
   def test_failing_create
-    assert_no_difference(Author, :count) do
+    assert_no_difference('Author.count') do
       post admin_author_index_url, params: { author: { first_name: 'Joel' } }
       assert_response :success
       assert_select 'div', attributes: { class: 'fieldWithErrors' }
@@ -80,7 +80,7 @@ class Admin::AuthorControllerTest < ActionDispatch::IntegrationTest
   end
 
   def test_destroy
-    assert_difference(Author, :count, -1) do
+    assert_difference('Author.count', -1) do
       delete '/admin/author/1'
       assert_response :redirect
       assert_redirected_to action: 'index'

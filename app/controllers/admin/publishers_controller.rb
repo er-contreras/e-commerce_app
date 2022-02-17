@@ -9,6 +9,7 @@ class Admin::PublishersController < ApplicationController
   # GET /publishers/1 or /publishers/1.json
   def show
     @publisher = Publisher.find(params[:id])
+    @page_title = @publisher.name
   end
 
   # GET /publishers/new
@@ -69,6 +70,6 @@ class Admin::PublishersController < ApplicationController
     # Only allow a list of trusted parameters through.
     def publisher_params
       # params.fetch(:publisher, {})
-    params.permit(:name)
+      params.require(:publisher).permit(:name)
     end
 end
