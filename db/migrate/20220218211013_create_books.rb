@@ -1,8 +1,8 @@
 class CreateBooks < ActiveRecord::Migration[6.1]
   def change
     create_table :books do |t|
-      t.string :title, limit: 255, null: false
-      t.references :publisher, null: false, foreign_key: true, index: true
+      t.string :title, limit: 255, null: false, default: false
+      t.references :publisher, null: false, foreign_key: true, index: true, default: false
       t.datetime :published_at
       t.string :isbn, limit: 13, unique: true
       t.text :blurb

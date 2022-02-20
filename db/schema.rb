@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(version: 2022_02_18_212729) do
   end
 
   create_table "authors_books", force: :cascade do |t|
-    t.bigint "author_id", null: false
-    t.bigint "book_id", null: false
+    t.bigint "author_id", default: 0, null: false
+    t.bigint "book_id", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["author_id"], name: "index_authors_books_on_author_id"
@@ -32,8 +32,8 @@ ActiveRecord::Schema.define(version: 2022_02_18_212729) do
   end
 
   create_table "books", force: :cascade do |t|
-    t.string "title", limit: 255, null: false
-    t.bigint "publisher_id", null: false
+    t.string "title", limit: 255, default: "f", null: false
+    t.bigint "publisher_id", default: 0, null: false
     t.datetime "published_at"
     t.string "isbn", limit: 13
     t.text "blurb"
