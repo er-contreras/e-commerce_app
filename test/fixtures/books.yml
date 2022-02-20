@@ -4,11 +4,13 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-atomic:
-  id: 1
-  title: default
-  published_at: may
-  isbn: unknown
-  blurb: unknowing
-  page_count: 2
-  price: 123
+# atomic:
+#   id: 1
+#   title: Ruby for Toddlers
+#   publisher_id: Publisher.find(1).id
+#    published_at: Time.now
+#   author: Author.find(:all)
+#   isbn: 123-123-123-1
+#   blurb: The best book since "Bodo Bär zu Hause"
+#   page_count: 12
+#   price: 40.4
