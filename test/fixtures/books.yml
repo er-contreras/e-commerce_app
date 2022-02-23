@@ -14,3 +14,16 @@
 #   blurb: The best book since "Bodo Bär zu Hause"
 #   page_count: 12
 #   price: 40.4
+
+pro_rails_ecommerce:
+  id: 1
+  title: Pro Rails E-Commerce
+  publisher_id: 1
+  isbn: 199-199-199-1
+  published_at: <%= Time.now.strftime("%Y-%m-%d") %>
+pro_rails_ecommerce_2:
+  id: 2
+  title: Pro Rails E-Commerce 2nd Edition
+  publisher_id: 1
+  isbn: 199-199-199-2
+  published_at: <%= Time.now.strftime("%Y-%m-%d") %>

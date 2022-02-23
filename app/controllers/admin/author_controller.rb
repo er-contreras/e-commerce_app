@@ -1,6 +1,5 @@
 class Admin::AuthorController < ApplicationController
   def index
-    # @authors = Author.find(:all)
     @authors = Author.all
     @page_title = 'Listing authors'
   end
