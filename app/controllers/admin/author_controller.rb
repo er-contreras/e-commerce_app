@@ -48,7 +48,7 @@ class Admin::AuthorController < ApplicationController
   def destroy
     @author = Author.find(params[:id])
     flash[:notice] = "Successfully deleted author #{@author.name}"
-    @author.delete
+    @author.destroy
     redirect_to action: 'index'
   end
 
