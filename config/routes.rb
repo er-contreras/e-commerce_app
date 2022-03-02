@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :author
     resources :publishers
+    resources :books
   end
 
   get 'about/index'
