@@ -8,24 +8,33 @@ class Admin::BooksController < ApplicationController
 
   # GET /admin/books/1 or /admin/books/1.json
   def show
+    @page_title = @book.title
+    @book = Book.find(params[:id])
   end
 
   # GET /admin/books/new
   def new
     @book = Book.new
+    @publishers = Publisher.all
+    @authors = Author.all
   end
 
   # GET /admin/books/1/edit
   def edit
+    @book = Book.find(params[:id])
+    @publishers = Publisher.all
+    @authors = Author.all
   end
 
   # POST /admin/books or /admin/books.json
   def create
     @book = Book.new(admin_book_params)
+    @publishers = Publisher.all
+    @authors = Author.all
 
     respond_to do |format|
       if @book.save
-        format.html { redirect_to admin_book_url(@book), notice: "Book was successfully created." }
+        format.html { redirect_to admin_books_url, notice: "Book was successfully created." }
         format.json { render :show, status: :created, location: @book }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -66,6 +75,6 @@ class Admin::BooksController < ApplicationController
     # Only allow a list of trusted parameters through.
     def admin_book_params
       # params.fetch(:book, {})
-      params.require(:book).permit(:title)
+      params.require(:book).permit(:title, :publisher_id, :published_at, :isbn, :blurb, :page_count, :price, author_ids: [])
     end
 end
