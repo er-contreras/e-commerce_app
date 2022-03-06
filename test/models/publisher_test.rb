@@ -1,4 +1,4 @@
-require 'test_helper'
+require './test/test_helper'
 
 class PublisherTest < ActiveSupport::TestCase
   # test "the truth" do

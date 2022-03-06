@@ -1,6 +1,6 @@
-require "./test/test_helper"
+require './test/test_helper'
 
-class BookTest < ActionDispatch::IntegrationTest
+class IntegrationBookTest < ActionDispatch::IntegrationTest
   def test_book_administration
     publisher = Publisher.create(name: 'Books for Dummies')
     author = Author.create(first_name: 'Bodo', last_name: 'Bär')
@@ -38,7 +38,7 @@ class BookTest < ActionDispatch::IntegrationTest
       follow_redirect!
       assert_response :success
       assert_select 'td', content: parameters[:book][:title]
-      return Book.find_by_title(parameters[:book][:title])
+      Book.find_by_title(parameters[:book][:title])
     end
   end
 

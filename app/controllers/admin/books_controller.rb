@@ -1,5 +1,5 @@
 class Admin::BooksController < ApplicationController
-  before_action :set_admin_book, only: %i[ show edit update destroy ]
+  before_action :set_admin_book, only: %i[show edit update destroy]
 
   # GET /admin/books or /admin/books.json
   def index
@@ -34,7 +34,7 @@ class Admin::BooksController < ApplicationController
 
     respond_to do |format|
       if @book.save
-        format.html { redirect_to admin_books_url, notice: "Book was successfully created." }
+        format.html { redirect_to admin_books_url, notice: 'Book was successfully created.' }
         format.json { render :show, status: :created, location: @book }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -47,7 +47,7 @@ class Admin::BooksController < ApplicationController
   def update
     respond_to do |format|
       if @book.update(admin_book_params)
-        format.html { redirect_to admin_book_url(@book), notice: "Book was successfully updated." }
+        format.html { redirect_to admin_book_url(@book), notice: 'Book was successfully updated.' }
         format.json { render :show, status: :ok, location: @book }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -61,20 +61,22 @@ class Admin::BooksController < ApplicationController
     @book.destroy
 
     respond_to do |format|
-      format.html { redirect_to admin_books_url, notice: "Book was successfully destroyed." }
+      format.html { redirect_to admin_books_url, notice: 'Book was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_admin_book
-      @book = Book.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def admin_book_params
-      # params.fetch(:book, {})
-      params.require(:book).permit(:title, :publisher_id, :published_at, :isbn, :blurb, :page_count, :price, author_ids: [])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_admin_book
+    @book = Book.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def admin_book_params
+    # params.fetch(:book, {})
+    params.require(:book).permit(:title, :publisher_id, :published_at, :isbn, :blurb, :page_count, :price,
+                                 author_ids: [])
+  end
 end

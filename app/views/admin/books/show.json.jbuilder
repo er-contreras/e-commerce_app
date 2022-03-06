@@ -1,1 +1,1 @@
-json.partial! "admin_books/admin_book", book: @book
+json.partial! 'admin_books/admin_book', book: @book
