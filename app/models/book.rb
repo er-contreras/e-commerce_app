@@ -4,6 +4,8 @@ class Book < ApplicationRecord
 
   belongs_to :publisher
 
+  has_one_attached :cover_image
+
   validates :title, length: { in: 1..255 }
   validates :publisher, presence: true
   validates :authors, presence: true

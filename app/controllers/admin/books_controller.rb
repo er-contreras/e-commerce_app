@@ -3,13 +3,14 @@ class Admin::BooksController < ApplicationController
 
   # GET /admin/books or /admin/books.json
   def index
+    @page_title = 'Listing books'
     @books = Book.all
   end
 
   # GET /admin/books/1 or /admin/books/1.json
   def show
-    @page_title = @book.title
     @book = Book.find(params[:id])
+    @page_title = @book.title.to_s
   end
 
   # GET /admin/books/new
@@ -21,6 +22,7 @@ class Admin::BooksController < ApplicationController
 
   # GET /admin/books/1/edit
   def edit
+    @page_title = 'Editing book'
     @book = Book.find(params[:id])
     @publishers = Publisher.all
     @authors = Author.all
@@ -77,6 +79,6 @@ class Admin::BooksController < ApplicationController
   def admin_book_params
     # params.fetch(:book, {})
     params.require(:book).permit(:title, :publisher_id, :published_at, :isbn, :blurb, :page_count, :price,
-                                 author_ids: [])
+                                 :cover_image, author_ids: [])
   end
 end

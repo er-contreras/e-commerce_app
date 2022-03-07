@@ -16,12 +16,56 @@ class IntegrationBookTest < ActionDispatch::IntegrationTest
       page_count: 123,
       price: 40.4
     }
+
+    george.list_books
+    george.show_book ruby_for_dummies
+
+    george.edit_book(ruby_for_dummies, book: {
+      title: 'Ruby for Toddlers',
+      publisher_id: publisher.id,
+      author_ids: [author.id],
+      published_at: Time.now,
+      isbn: '123-123-123-X',
+      blurb: 'The best book released since "Eating for Toddlers"',
+      page_count: 123,
+      price: 40.4
+    })
+
+    bob = new_session_as(:bob)
+    bob.delete_book ruby_for_dummies
   end
 
   private
 
   module BookTestDSL
     attr_writer :name
+
+    def list_books
+      get '/admin/books'
+      assert_response :success
+    end
+
+    def show_book(book)
+      get "/admin/books/#{book.id}"
+      assert_response :success
+    end
+
+    def edit_book(book, parameters)
+      get "/admin/books/#{book.id}/edit"
+      assert_response :success
+
+      put "/admin/books/#{book.id}", params: parameters
+      assert_response :redirect
+      follow_redirect!
+      assert_response :success
+    end
+
+    def delete_book(book)
+      delete "/admin/books/#{book.id}"
+      assert_response :redirect
+      follow_redirect!
+      assert_response :success
+    end
 
     def add_book(parameters)
       author = Author.first
