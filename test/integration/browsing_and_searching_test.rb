@@ -22,12 +22,16 @@ class BrowsingAndSearchingTest < ActionDispatch::IntegrationTest
       assert_response :success
       assert_select "dl", attributes: { id: "books" }, children: { count: 10, only: { tag: "dt"} }
       assert_select "dt", content: "The Idiot"
+
+      check_book_links
     end
 
     def go_to_second_page
       get "/catalog/index?page=2"
       assert_response :success
       assert_equal Book.find_by(title: "Pro Rails E-Commerce"), books.first
+
+      check_book_links
     end
 
     def get_book_details_for(title)
@@ -37,6 +41,12 @@ class BrowsingAndSearchingTest < ActionDispatch::IntegrationTest
 
       assert_select "h1", content: @book.title
       assert_select "h2", content: "by #{@book.authors.map{|a| a.name}}"
+    end
+
+    def check_book_links
+      for book in books
+        assert_select "a", attributes: { href: "/catalog/show/#{book.id}" }
+      end
     end
   end
 
