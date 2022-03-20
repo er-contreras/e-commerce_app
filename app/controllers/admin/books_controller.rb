@@ -78,7 +78,15 @@ class Admin::BooksController < ApplicationController
   # Only allow a list of trusted parameters through.
   def admin_book_params
     # params.fetch(:book, {})
-    params.require(:book).permit(:title, :publisher_id, :published_at, :isbn, :blurb, :page_count, :price,
-                                 :cover_image, author_ids: [])
+    params.require(:book).permit(
+      :title,
+      :publisher_id,
+      :published_at,
+      :isbn,
+      :blurb,
+      :page_count,
+      :price,
+      :cover_image,
+      author_ids: [])
   end
 end

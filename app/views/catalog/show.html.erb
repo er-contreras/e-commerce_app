@@ -1,0 +1,14 @@
+<h2>by <%= @book.authors.map{|a| a.name}.join(", ") %></h2>
+<image src="<%= (url_for(@book.cover_image)) unless @book.cover_image.blank? %>" >
+<dl>
+  <dt>Price</dt>
+  <dd><%= number_to_currency(@book.price) -%></dd>
+  <dt>Page count</dt>
+  <dd><%= @book.page_count -%></dd>
+  <dt>Publisher</dt>
+  <dd><%= @book.publisher.name%></dd>
+  <dt>Blurb</dt>
+  <dd><%= @book.blurb%></dd>
+</dl>
+
+<p><%= link_to "Back to Catalog", action: "index" %></p>
