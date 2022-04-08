@@ -32,5 +32,8 @@ class CatalogController < ApplicationController
     flash.now[:notice] = 'No books found matching your criteria' unless @books.size.positive?
   end
 
-  def latest; end
+  def latest
+    @page_title = "Latest Books"
+    @books = Book.latest
+  end
 end

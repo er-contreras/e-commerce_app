@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'catalog/search/:id', to: 'catalog#search'
 
   get 'catalog/latest'
+  get 'catalog/latest/:id', to: 'catalog#latest'
 
   namespace :admin do
     resources :author

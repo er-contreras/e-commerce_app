@@ -28,4 +28,9 @@ class Book < ApplicationRecord
   rescue StandardError
     ''
   end
+
+  def self.latest
+    # find(:all, limit: 10, order: "books.id desc", include: [:authors, :publisher])
+    self.order(:id).limit(10)
+  end
 end

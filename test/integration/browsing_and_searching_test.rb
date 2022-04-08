@@ -6,6 +6,7 @@ class BrowsingAndSearchingTest < ActionDispatch::IntegrationTest
     jill.browse_index
     jill.go_to_second_page
     jill.searches_for_tolstoy
+    jill.views_latest_books
   end
 
   def test_getting_details
@@ -62,6 +63,17 @@ class BrowsingAndSearchingTest < ActionDispatch::IntegrationTest
       books.each do |book|
         assert_select 'a', attributes: { href: "/catalog/show/#{book.id}" }
       end
+    end
+
+    def views_latest_books
+      get "/catalog/latest"
+      assert_response :success
+
+      assert_select "dl", attributes: { id: "books" }, children: { count: 10, only: { tag: "dt" } }
+      Book.latest.each do |book|
+        assert_select "dt", content: book.title
+      end
+      check_book_links
     end
   end
 
