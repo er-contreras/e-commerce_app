@@ -66,12 +66,12 @@ class BrowsingAndSearchingTest < ActionDispatch::IntegrationTest
     end
 
     def views_latest_books
-      get "/catalog/latest"
+      get '/catalog/latest'
       assert_response :success
 
-      assert_select "dl", attributes: { id: "books" }, children: { count: 10, only: { tag: "dt" } }
+      assert_select 'dl', attributes: { id: 'books' }, children: { count: 10, only: { tag: 'dt' } }
       Book.latest.each do |book|
-        assert_select "dt", content: book.title
+        assert_select 'dt', content: book.title
       end
       check_book_links
     end

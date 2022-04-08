@@ -33,7 +33,7 @@ class CatalogController < ApplicationController
   end
 
   def latest
-    @page_title = "Latest Books"
+    @page_title = 'Latest Books'
     @books = Book.latest
   end
 end
