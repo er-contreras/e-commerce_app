@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
   # resources :catalogs, path_names: { new: 'search' }
   get 'catalog/index'
+
   get 'catalog/show'
   get 'catalog/show/:id', to: 'catalog#show'
+
   get 'catalog/search'
+  get 'catalog/search/:id', to: 'catalog#search'
+
   get 'catalog/latest'
 
   namespace :admin do

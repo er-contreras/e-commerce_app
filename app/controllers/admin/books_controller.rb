@@ -87,6 +87,7 @@ class Admin::BooksController < ApplicationController
       :page_count,
       :price,
       :cover_image,
-      author_ids: [])
+      author_ids: []
+    )
   end
 end

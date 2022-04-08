@@ -21,15 +21,15 @@ class IntegrationBookTest < ActionDispatch::IntegrationTest
     george.show_book ruby_for_dummies
 
     george.edit_book(ruby_for_dummies, book: {
-      title: 'Ruby for Toddlers',
-      publisher_id: publisher.id,
-      author_ids: [author.id],
-      published_at: Time.now,
-      isbn: '123-123-123-X',
-      blurb: 'The best book released since "Eating for Toddlers"',
-      page_count: 123,
-      price: 40.4
-    })
+                       title: 'Ruby for Toddlers',
+                       publisher_id: publisher.id,
+                       author_ids: [author.id],
+                       published_at: Time.now,
+                       isbn: '123-123-123-X',
+                       blurb: 'The best book released since "Eating for Toddlers"',
+                       page_count: 123,
+                       price: 40.4
+                     })
 
     bob = new_session_as(:bob)
     bob.delete_book ruby_for_dummies
@@ -68,7 +68,7 @@ class IntegrationBookTest < ActionDispatch::IntegrationTest
     end
 
     def add_book(parameters)
-      author = Author.first
+      # author = Author.first
       publisher = Publisher.first
 
       get '/admin/books/new'

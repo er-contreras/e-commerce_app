@@ -1,15 +1,6 @@
-<dl id="books">
-  <% for book in @books %>
-    <dt><%= link_to book.title, action: "show", id: book %></dt>
-    <dt><%= book.title %></dt>
-    <% for author in book.authors %>
-      <dd><%= author.last_name %>, <%= author.first_name %></dd>
-    <% end %>
-    <dd><%= pluralize(book.page_count, "page") %></dd>
-    <dd>Price: <%= number_to_currency(book.price) %></dd>
-    <dd><small>Publisher: <%= book.publisher.name %></small></dd>
-  <% end %>
-</dl>
+<p><%= link_to "Search", action: "search" %></p>
+
+<%= render(partial: "books") %>
 
 <%# <%= link_to 'Previous page', { page: @book_pages.current.previous } if @book_pages.current %>
 <%# <%= link_to 'Next page', { page: @book_pages.current.next } if @book_pages.current.next %>

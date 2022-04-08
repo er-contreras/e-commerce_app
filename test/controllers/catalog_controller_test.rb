@@ -1,4 +1,4 @@
-require "test_helper"
+require 'test_helper'
 
 class CatalogControllerTest < ActionDispatch::IntegrationTest
   # test "should get index" do
