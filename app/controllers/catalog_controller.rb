@@ -36,4 +36,14 @@ class CatalogController < ApplicationController
     @page_title = 'Latest Books'
     @books = Book.latest
   end
+
+  def rss
+    latest
+    render layout: false
+
+    # respond_to do |format|
+    #   format.html
+    #   format.xml { render :layout => false }
+    # end
+  end
 end

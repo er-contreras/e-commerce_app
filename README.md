@@ -1,6 +1,18 @@
 # E-Commerce App
 
-> An App that creates Authors as well as books.
+## Features implemented
+
+- Implement the about user story
+- Author Management
+  - Unit testing
+  - Functional Testing
+  - Integration Testing
+- Book Inventory Management
+  - Implmenting the Publisher Administration Interface
+  - Implementing the Book Administration Interface
+- Book Catalog Browsing
+  - Implementing the Book Catalog Interface
+  - Creating an RSS Feed
 
 
 ## Built With

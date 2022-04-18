@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get 'catalog/latest'
   get 'catalog/latest/:id', to: 'catalog#latest'
 
+  get 'catalog/rss', format: 'application/xml'
+
   namespace :admin do
     resources :author
     resources :publishers

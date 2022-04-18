@@ -7,6 +7,7 @@ class BrowsingAndSearchingTest < ActionDispatch::IntegrationTest
     jill.go_to_second_page
     jill.searches_for_tolstoy
     jill.views_latest_books
+    jill.reads_rss
   end
 
   def test_getting_details
@@ -74,6 +75,17 @@ class BrowsingAndSearchingTest < ActionDispatch::IntegrationTest
         assert_select 'dt', content: book.title
       end
       check_book_links
+    end
+
+    def reads_rss
+      get "/catalog/rss"
+      assert_response :success
+      assert_equal "application/xml", response.headers["Content-Type"] = "application/xml"
+
+      assert_select "channel", children: { count: 10, only: { tag: "item"} }
+      Book.latest.each do |book|
+        assert_select "title", content: book.title
+      end 
     end
   end
 
