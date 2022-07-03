@@ -7,6 +7,12 @@
       <dd><%= author.last_name %>, <%= author.first_name %></dd>
     <% end %>
 
+      <dd>
+        <strong>
+          <%= link_to "+", controller: "cart", action: "add", id: book %>
+        </strong>
+      </dd>
+
     <dd><%= pluralize(book.page_count, "page") %></dd>
     <dd>Price: <%= number_to_currency(book.price) %></dd>
     <dd><small>Publisher: <%= book.publisher.name %></small></dd>

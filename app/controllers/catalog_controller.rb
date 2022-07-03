@@ -1,4 +1,6 @@
 class CatalogController < ApplicationController
+  before_action :initialize_cart
+
   PER_PAGE = 2
 
   def index

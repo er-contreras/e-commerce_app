@@ -14,6 +14,10 @@ class Book < ApplicationRecord
 
   has_one_attached :cover_image
 
+  # Shoping Cart Implementation
+  has_many :cart_items
+  has_many :carts, through: :cart_items
+
   validates :title, length: { in: 1..255 }
   validates :publisher, presence: true
   validates :authors, presence: true
