@@ -31,7 +31,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Clone Repo
 ```
-type 'git clone https://github.com/eri8-9/e-commerce_app'
+type 'git clone https://github.com/er-contreras/e-commerce_app'
 ```
 ### Install
 ```
