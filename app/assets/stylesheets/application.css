@@ -46,8 +46,17 @@ body {
 
 #menu ul {
   display: flex;
+  justify-content: space-around;
   font-size: 2rem;
   list-style: none;
+  max-width: 101rem;
+  padding: 3rem;
+}
+
+#menu li {
+  display: flex;
+  justify-content: space-around;
+  width: 50rem;
 }
 
 #footer {
