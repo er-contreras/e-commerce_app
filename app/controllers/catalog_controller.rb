@@ -1,7 +1,7 @@
 class CatalogController < ApplicationController
   before_action :initialize_cart
 
-  PER_PAGE = 2
+  PER_PAGE = 4
 
   def index
     @page_title = 'Book List'
@@ -47,5 +47,11 @@ class CatalogController < ApplicationController
     #   format.html
     #   format.xml { render :layout => false }
     # end
+  end
+
+  def move
+    @book = Book.find(params[:id])
+    @book.insert_at(params[:position].to_i)
+    head :ok
   end
 end

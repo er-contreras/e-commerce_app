@@ -21,6 +21,14 @@ Rails.application.routes.draw do
 
   post 'add', to: 'cart#add'
 
+  patch '/book/:id/move', to: 'catalog#move'
+
+  # resources :carts do
+  #   member do
+  #     patch :move
+  #   end
+  # end
+
   get 'about/index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

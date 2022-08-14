@@ -27,6 +27,8 @@ class Book < ApplicationRecord
   validates :isbn, format: { with: /[0-9\-xX]{13}/ }
   validates :isbn, uniqueness: true
 
+  acts_as_list
+
   def author_names
     authors.map(&:name).join(', ')
   rescue StandardError
