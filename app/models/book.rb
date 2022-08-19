@@ -9,8 +9,6 @@ class Book < ApplicationRecord
   pg_search_scope :search_by_authors, associated_against: {
     authors: %i[first_name last_name]
   }
-  # multisearchable against: [:title]
-  # PgSearch::Multisearch.rebuild(Book, clean_up: false)
 
   has_one_attached :cover_image
 
@@ -36,7 +34,6 @@ class Book < ApplicationRecord
   end
 
   def self.latest
-    # find(:all, limit: 10, order: "books.id desc", include: [:authors, :publisher])
     order(:id).limit(10)
   end
 end

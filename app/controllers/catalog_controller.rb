@@ -7,11 +7,6 @@ class CatalogController < ApplicationController
     @page_title = 'Book List'
     @book_pages = params.fetch(:page, 0).to_i
     @books = Book.offset(@book_pages * PER_PAGE).limit(PER_PAGE)
-
-    # @book_pages, @books = paginate :books,
-    #   per_page: 10,
-    #   include: [:authors, :publisher],
-    #   order: "books.id desc"
   end
 
   def show
@@ -42,11 +37,6 @@ class CatalogController < ApplicationController
   def rss
     latest
     render layout: false
-
-    # respond_to do |format|
-    #   format.html
-    #   format.xml { render :layout => false }
-    # end
   end
 
   def move
