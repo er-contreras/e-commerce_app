@@ -12,8 +12,6 @@ import Sortable from "sortablejs"
 import Rails from '@rails/ujs'
 
 export default class extends Controller {
-  // static targets = [ "output" ]
-
   connect() {
     this.sortable = Sortable.create(this.element, {
       onEnd: this.end.bind(this)
@@ -21,9 +19,7 @@ export default class extends Controller {
   }
 
   end(event) {
-    // console.log(event.path[2].attributes[1].value)
     let id = event.item.dataset.id
-    // let id = event.path[2].attributes[1].value
     let data = new FormData()
     data.append("position", event.newIndex + 1)
     console.log(event)

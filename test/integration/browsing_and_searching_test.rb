@@ -53,7 +53,7 @@ class BrowsingAndSearchingTest < ActionDispatch::IntegrationTest
       get "/catalog/search?q=#{url_encode('Leo Tolstoy')}"
       assert_response :success
 
-      assert_select 'dl', attributes: { id: 'books' }, children: { count: leo.books.size, only: { tag: 'dt' } }
+      assert_select 'li', attributes: { class: 'book' }, children: { count: leo.books.size, only: { tag: 'dl' } }
 
       leo.books.each do |book|
         assert_select 'dt', content: book.title
@@ -78,14 +78,14 @@ class BrowsingAndSearchingTest < ActionDispatch::IntegrationTest
     end
 
     def reads_rss
-      get "/catalog/rss"
+      get '/catalog/rss'
       assert_response :success
-      assert_equal "application/xml", response.headers["Content-Type"] = "application/xml"
+      assert_equal 'application/xml', response.headers['Content-Type'] = 'application/xml'
 
-      assert_select "channel", children: { count: 10, only: { tag: "item"} }
+      assert_select 'channel', children: { count: 10, only: { tag: 'item' } }
       Book.latest.each do |book|
-        assert_select "title", content: book.title
-      end 
+        assert_select 'title', content: book.title
+      end
     end
   end
 

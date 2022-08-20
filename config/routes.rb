@@ -1,17 +1,13 @@
 Rails.application.routes.draw do
-  # resources :catalogs, path_names: { new: 'search' }
   get 'catalog/index'
-
   get 'catalog/show'
   get 'catalog/show/:id', to: 'catalog#show'
-
   get 'catalog/search'
   get 'catalog/search/:id', to: 'catalog#search'
-
   get 'catalog/latest'
   get 'catalog/latest/:id', to: 'catalog#latest'
-
   get 'catalog/rss', format: 'application/xml'
+  patch '/book/:id/move', to: 'catalog#move'
 
   namespace :admin do
     resources :author
@@ -20,14 +16,6 @@ Rails.application.routes.draw do
   end
 
   post 'add', to: 'cart#add'
-
-  patch '/book/:id/move', to: 'catalog#move'
-
-  # resources :carts do
-  #   member do
-  #     patch :move
-  #   end
-  # end
 
   get 'about/index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

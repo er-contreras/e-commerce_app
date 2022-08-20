@@ -1,24 +1,24 @@
 <ul id="books" data-controller="drag" data-drag-url="/book/:id/move">
-  <% for book in @books %>
-  <li class="book" data-id="<%= book.id %>" >
+  <% @books.each { |book| %>
+  <li class="book" data-id="<%=  book.id  %>">
     <dl>
-      <dt><%= link_to book.title, action: "show", id: book %></dt>
-      <dt><%= book.title %></dt>
+      <dt><%=  link_to book.title, action: "show", id: book  %></dt>
+      <dt><%=  book.title  %></dt>
 
-      <% for author in book.authors %>
-        <dd><%= author.last_name %>, <%= author.first_name %></dd>
-      <% end %>
+      <% book.authors.each { |author| %>
+      <dd><%=   author.last_name   %>, <%= author.first_name %></dd>
+      <% } %>
 
-        <dd>
-          <strong>
-            <%= add_book_link("+", book) %>
-          </strong>
-        </dd>
+      <dd>
+        <strong>
+          <%=  add_book_link("+", book)  %>
+        </strong>
+      </dd>
 
-      <dd><%= pluralize(book.page_count, "page") %></dd>
-      <dd>Price: <%= number_to_currency(book.price) %></dd>
-      <dd><small>Publisher: <%= book.publisher.name %></small></dd>
+      <dd><%=  pluralize(book.page_count, "page ")  %></dd>
+      <dd>Price: <%=  number_to_currency(book.price)  %></dd>
+      <dd><small>Publisher: <%=  book.publisher.name  %></small></dd>
     </dl>
   </li>
-  <% end %>
+  <%  } %>
 </ul>
