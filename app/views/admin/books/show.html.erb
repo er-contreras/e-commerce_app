@@ -20,7 +20,7 @@
   <dd>N/A</dd>
   <% end %>
   <% if @book.cover_image.attached? %>
-  <image src="<%=(url_for(@book.cover_image))%>">
+    <image src="<%=(url_for(@book.cover_image))%>"></image>
   <% end %>
 </dl>
 

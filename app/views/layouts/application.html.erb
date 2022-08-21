@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+"https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="us" xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <title><%= @page_title || 'Emporium' %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -30,7 +30,7 @@
     </div>
 
     <div id="content">
-      <%= "<h1>#{@page_title}</h1>" if @page_title %>
+      <h1><%= "#{@page_title}" if @page_title %></h1>
       <% if flash[:notice] %>
         <div id="notice">
           <%= flash[:notice] %>

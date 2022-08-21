@@ -3,11 +3,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.2'
 
-# Gems I installed
-gem 'rubocop', '>= 1.0', '< 2.0'
-gem 'pry', '~> 0.14.1'
-# gem 'texticle', require: 'texticle/rails'
+# Gems I've installed
+gem 'acts_as_list', '~> 1.0'
 gem 'pg_search'
+gem 'pry', '~> 0.14.1'
+gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'stimulus-rails'
 
 # Gems natively installed
@@ -63,5 +63,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
-
-gem "acts_as_list", "~> 1.0"
