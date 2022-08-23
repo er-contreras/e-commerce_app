@@ -5,10 +5,10 @@
   <h3>Your Shopping Cart</h3>
 
   <ul>
-    <% for item in @cart.cart_items %>
-    <li id="cart_item_<%= item.book.id %>" >
-      <%= render partial: "cart/item", object: item %>
+    <% @cart.cart_items.each { |item| %>
+    <li id="cart_item_<%=  item.book.id  %>">
+      <%=  render partial: 'cart/item', object: item  %>
     </li>
-    <% end %>
+    <%  } %>
   </ul>
   <p id="cart_total"><strong>Total: $<%= sprintf("%0.2f", @cart.total) %></strong></p>

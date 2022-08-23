@@ -2,7 +2,8 @@ class CartController < ApplicationController
   before_action :initialize_cart
 
   def add
-    @book = Book.find(params[:id])
+    # @book = Book.find(params[:id])
+    @cart = Book.find(params[:id])
 
     if request.xhr?
       @item = @cart.add(params[:id])
