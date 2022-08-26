@@ -4,19 +4,22 @@ class Book < ApplicationRecord
 
   belongs_to :publisher
 
-  # PG_Search Implementation
-  include PgSearch::Model
-  pg_search_scope :search_by_title, against: [:title]
-  pg_search_scope :search_by_authors, associated_against: {
-    authors: %i[first_name last_name]
-  }
-
   # blobs to load an image
   has_one_attached :cover_image
 
   # Shoping Cart Implementation
   has_many :cart_items
   has_many :carts, through: :cart_items
+
+  # drag and drop cart
+  acts_as_list
+
+  # PG_Search Implementation
+  include PgSearch::Model
+  pg_search_scope :search_by_title, against: [:title]
+  pg_search_scope :search_by_authors, associated_against: {
+    authors: %i[first_name last_name]
+  }
 
   validates :title, length: { in: 1..255 }
   validates :publisher, presence: true
@@ -26,9 +29,6 @@ class Book < ApplicationRecord
   validates :price, numericality: true
   validates :isbn, format: { with: /[0-9\-xX]{13}/ }
   validates :isbn, uniqueness: true
-
-  # drag and drop cart
-  acts_as_list
 
   def author_names
     authors.map(&:name).join(', ')

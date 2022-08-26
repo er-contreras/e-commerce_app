@@ -10,7 +10,7 @@ class Cart < ApplicationRecord
     items = cart_items.find_by(book_id: book_id)
     book = Book.find(book_id)
 
-    if items.to_s.size < 1
+    if items.to_s.empty?
       ci = cart_items.create(book_id: book_id, amount: 1, price: book.price)
     else
       ci = items.first
