@@ -5,9 +5,9 @@ module ApplicationHelper
   # end
 
   def add_book_link(text, book)
-    link_to text, url: {controller: "cart", action: "add", id: book},
-                  title: "Add to cart", href: url_for( controller: "cart", action: "add", id: book), remote: true
-  end  
+    link_to text, url: { controller: 'cart', action: 'add', id: book },
+                  title: 'Add to cart', href: url_for(controller: 'cart', action: 'add', id: book), remote: true
+  end
 
   # def remove_book_link(text, book)
   #   link_to text, { url: { controller: "cart", action: "remove", id: book}},
