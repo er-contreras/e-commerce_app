@@ -1,12 +1,7 @@
 module ApplicationHelper
-  # def add_book_link(text, book)
-  #   link_to text, { url: {controller: "cart", action: "add", id: book} },
-  #                 { title: "Add to cart", href: url_for( controller: "cart", action: "add", id: book) }
-  # end
-
   def add_book_link(text, book)
-    link_to text, url: { controller: 'cart', action: 'add', id: book },
-                  title: 'Add to cart', href: url_for(controller: 'cart', action: 'add', id: book), remote: true
+    link_to text, { url: { controller: 'cart', action: 'add', id: book } },
+            { title: 'Add to cart', href: url_for(controller: 'cart', action: 'add', id: book) }
   end
 
   # def remove_book_link(text, book)

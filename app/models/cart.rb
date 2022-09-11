@@ -3,7 +3,7 @@ class Cart < ApplicationRecord
   has_many :books, through: :cart_items
 
   def total
-    cart_items.inject(0) { |sum, n| n.price * n.amount + sum }
+    cart_items.inject(0) { |sum, n| (n.price * n.amount) + sum }
   end
 
   def add(book_id)
@@ -13,7 +13,7 @@ class Cart < ApplicationRecord
     if items.to_s.empty?
       ci = cart_items.create(book_id: book_id, amount: 1, price: book.price)
     else
-      ci = items.first
+      ci = items
       ci.update_attribute(:amount, ci.amount + 1)
     end
     ci

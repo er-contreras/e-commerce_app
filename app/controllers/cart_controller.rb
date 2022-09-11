@@ -3,7 +3,6 @@ class CartController < ApplicationController
 
   def add
     @book = Book.find(params[:id])
-    # @cart = Book.find(params[:id])
 
     if request.xhr?
       @item = @cart.add(params[:id])
