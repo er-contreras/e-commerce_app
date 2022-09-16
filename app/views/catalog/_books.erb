@@ -6,18 +6,18 @@
       <dt><%= book.title %></dt>
 
       <% book.authors.each { |author| %>
-      <dd><%= author.last_name %>, <%= author.first_name %></dd>
+        <dd><%= author.last_name %>, <%= author.first_name %></dd>
       <% } %>
+
+      <dd><%= pluralize(book.page_count, "page") %></dd>
+      <dd>Price: <%= number_to_currency(book.price) %></dd>
+      <dd><small>Publisher: <%=  book.publisher.name %></small></dd>
 
       <dd>
         <strong>
           <%= add_book_link("+", book) %>
         </strong>
       </dd>
-
-      <dd><%= pluralize(book.page_count, "page") %></dd>
-      <dd>Price: <%= number_to_currency(book.price) %></dd>
-      <dd><small>Publisher: <%=  book.publisher.name %></small></dd>
     </dl>
   </li>
   <% } %>
