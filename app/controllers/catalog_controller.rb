@@ -1,7 +1,7 @@
 class CatalogController < ApplicationController
   before_action :initialize_cart
 
-  PER_PAGE = 4
+  PER_PAGE = 6
 
   def index
     @page_title = 'Book List'
