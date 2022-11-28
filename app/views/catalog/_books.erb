@@ -1,24 +1,27 @@
 <ul id="books" data-controller="drag" data-drag-url="/book/:id/move">
   <% @books.each { |book| %>
-  <li class="book" data-id="<%=  book.id  %>">
-    <dl>
-      <dt><%= link_to book.title, action: "show", id: book %></dt>
-      <dt><%= book.title %></dt>
+    <li class="book" data-id="<%=  book.id  %>">
+      <dl>
+        <dt><%= link_to book.title, action: "show", id: book %></dt>
+        <dt><%= book.title %></dt>
 
-      <% book.authors.each { |author| %>
-        <dd><%= author.last_name %>, <%= author.first_name %></dd>
-      <% } %>
+        <% book.authors.each { |author| %>
+          <dd><%= author.last_name %>, <%= author.first_name %></dd>
+        <% } %>
 
-      <dd><%= pluralize(book.page_count, "page") %></dd>
-      <dd>Price: <%= number_to_currency(book.price) %></dd>
-      <dd><small>Publisher: <%=  book.publisher.name %></small></dd>
+        <dd><%= pluralize(book.page_count, "page") %></dd>
+        <dd>Price: <%= number_to_currency(book.price) %></dd>
+        <dd><small>Publisher: <%=  book.publisher.name %></small></dd>
 
-      <dd>
-        <strong>
-          <%= add_book_link("+", book) %>
-        </strong>
-      </dd>
-    </dl>
-  </li>
+        <dd>
+          <strong>
+            <%#= add_book_link("+", book) %>
+            <div data-controller="add-with-ajax">
+              <button data-action="click->add-with-ajax#greet">Add Book</button>
+            </div>
+          </strong>
+        </dd>
+      </dl>
+    </li>
   <% } %>
 </ul>
