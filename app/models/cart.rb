@@ -11,11 +11,11 @@ class Cart < ApplicationRecord
     book = Book.find(book_id)
 
     if items.to_s.empty?
-      ci = cart_items.create(book_id: book_id, amount: 1, price: book.price)
+      cart_item = cart_items.create(book_id: book_id, amount: 1, price: book.price)
     else
-      ci = items
-      ci.update_attribute(:amount, ci.amount + 1)
+      cart_item = items
+      cart_item.update_attribute(:amount, cart_item.amount + 1)
     end
-    ci
+    cart_item
   end
 end

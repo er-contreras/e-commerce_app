@@ -15,10 +15,18 @@
 
         <dd>
           <strong>
-            <%#= add_book_link("+", book) %>
+            <%= add_book_link("+", book) %>
+
             <div data-controller="add-with-ajax">
-              <button data-action="click->add-with-ajax#greet">Add Book</button>
+              <button data-action="click->add-with-ajax#request" data-add-with-ajax-url-value="add">Add Book</button>
             </div>
+
+            <%#= form_for :book, remote: true do |f| %>
+              <%#= f.label :name, 'Fruit' %>
+              <%#= f.text_field :name %>
+
+              <%#= f.submit 'Create' %>
+            <%# end %>
           </strong>
         </dd>
       </dl>

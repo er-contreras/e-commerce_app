@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.2'
+ruby '3.1.3'
 
 # Gems I've installed
 gem 'acts_as_list', '~> 1.0'
@@ -9,13 +9,14 @@ gem 'pg_search'
 gem 'pry', '~> 0.14.1'
 gem 'pry-byebug'
 gem 'rubocop', '>= 1.0', '< 2.0'
+gem 'sprockets-rails'
 gem 'stimulus-rails'
 gem 'turbo-rails'
 
 # Gems natively installed
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
-gem 'rails', '~> 6.1.4', '>= 6.1.4.4'
+gem 'rails', '~> 7.0.4'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 # Use Puma as the app server

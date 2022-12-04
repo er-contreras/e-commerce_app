@@ -4,10 +4,10 @@ class CartController < ApplicationController
   def add
     # binding.pry
 
-    @book = Book.find(params[:id])
-
     logger.debug "is it a xml_html_request? #{request.xhr?}\n #{request}" if request
     logger.debug "is it a post request? #{request.post?}\n #{request}" if request
+
+    @book = Book.find(params[:id])
 
     if request.xhr?
       @item = @cart.add(params[:id])

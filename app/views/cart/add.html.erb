@@ -1,2 +1,2 @@
 <strong>Please confirm adding <em><%= @book.title %></em> to your shopping cart.</strong>
-<%= button_to "Confirm", action: "add", id: params[:id] %>
+<%= button_to "Confirm", { action: "add", id: params[:id] }, remote: true, form: { "data-type" => "json" } %>
