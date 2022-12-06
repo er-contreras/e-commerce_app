@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get 'catalog/latest/:id', to: 'catalog#latest'
   get 'catalog/rss', format: 'application/xml'
   patch '/book/:id/move', to: 'catalog#move'
+  get 'catalog/data'
 
   get 'add', to: 'cart#add'
   post 'add', to: 'cart#add'

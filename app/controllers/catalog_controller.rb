@@ -44,4 +44,6 @@ class CatalogController < ApplicationController
     @book.insert_at(params[:position].to_i)
     head :ok
   end
+
+  def data; end
 end
