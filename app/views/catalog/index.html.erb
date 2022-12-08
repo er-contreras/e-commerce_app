@@ -4,8 +4,7 @@
 
 <div>
   <% if @book_pages > 0 %>
-    <%= link_to 'Previous page', catalog_index_path(page: @book_pages - 1) %>
-    |
+    <%= link_to 'Previous page', catalog_index_path(page: @book_pages - 1) %> |
   <% end %>
   <%= link_to 'Next page', catalog_index_path(page: @book_pages + 1) %>
 </div>

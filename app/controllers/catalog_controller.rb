@@ -1,7 +1,7 @@
 class CatalogController < ApplicationController
   before_action :initialize_cart
 
-  PER_PAGE = 6
+  PER_PAGE = 3
 
   def index
     @page_title = 'Book List'
@@ -44,6 +44,4 @@ class CatalogController < ApplicationController
     @book.insert_at(params[:position].to_i)
     head :ok
   end
-
-  def data; end
 end

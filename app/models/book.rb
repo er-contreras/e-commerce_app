@@ -11,9 +11,6 @@ class Book < ApplicationRecord
   has_many :cart_items
   has_many :carts, through: :cart_items
 
-  # drag and drop cart
-  acts_as_list
-
   # PG_Search Implementation
   include PgSearch::Model
   pg_search_scope :search_by_title, against: [:title]

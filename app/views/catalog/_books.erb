@@ -1,4 +1,4 @@
-<ul id="books" data-controller="add-with-ajax">
+<ul id="books" data-controller="add-with-ajax" >
   <% @books.each { |book| %>
     <li class="book" data-id="<%=  book.id  %>">
       <dl>
@@ -16,7 +16,9 @@
         <dd>
           <strong>
             <%#= add_book_link("+", book) %>
-              <a href="#" data-add-with-ajax-url-param="data.html" data-action="click->add-with-ajax#load">Add Book</a>
+            <div data-add-with-ajax-url-param="<%= add_path %>">
+              <button data-action="click->add-with-ajax#load">Add Book</button >
+            </div>
           </strong>
         </dd>
       </dl>
