@@ -16,9 +16,7 @@
         <dd>
           <strong>
             <%#= add_book_link("+", book) %>
-            <div data-add-with-ajax-url-param="<%= add_path %>">
-              <button data-action="click->add-with-ajax#load">Add Book</button >
-            </div>
+            <%= button_to 'Add to cart', add_path(id: book), method: :post, ajax: true %>
           </strong>
         </dd>
       </dl>
