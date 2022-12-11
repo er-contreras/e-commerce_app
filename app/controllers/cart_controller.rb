@@ -2,11 +2,6 @@ class CartController < ApplicationController
   before_action :initialize_cart
 
   # def add
-  #   # binding.pry
-  #
-  #   logger.debug "is it a xml_html_request? #{request.xhr?}\n #{request}" if request
-  #   logger.debug "is it a post request? #{request.post?}\n #{request}" if request
-  #
   #   @book = Book.find(params[:id])
   #
   #   if request.xhr?
@@ -22,18 +17,15 @@ class CartController < ApplicationController
   #   end
   # end
 
-  # def add
-  #   @book = Book.new(book_params)
-  #
-  #   respond_to do |format|
-  #     @book.save
-  #     format.js
-  #   end
-  # end
-  #
-  # private
-  #
-  # def book_params
-  #   params.permit(:id)
-  # end
+  def add
+    @book = Book.find(params[:id])
+    @item = @cart.add(params[:id])
+
+    respond_to do |format|
+      flash[:cart_notice] = "Book added #{@item.book.title}"
+      # The ajax request could respond with an html
+      format.html { redirect_to catalog_index_path }
+      # format.js
+    end
+  end
 end

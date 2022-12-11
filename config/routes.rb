@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   patch '/book/:id/move', to: 'catalog#move'
   get 'catalog/data'
 
-  get 'add', to: 'cart#add'
+  # get 'add', to: 'cart#add'
   post 'add', to: 'cart#add'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
