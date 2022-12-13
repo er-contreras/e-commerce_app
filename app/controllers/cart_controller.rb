@@ -28,4 +28,8 @@ class CartController < ApplicationController
       # format.js
     end
   end
+
+  def remove; end
+
+  def clear; end
 end
