@@ -13,6 +13,11 @@
 - Book Catalog Browsing
   - Implementing the Book Catalog Interface
   - Creating an RSS Feed
+- Shopping Cart Implementation
+  - Implementing the user stories
+  - Use Ajax request to add book to the cart
+- Drag and Drop
+  
 
 
 ## Built With

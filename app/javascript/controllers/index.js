@@ -4,5 +4,5 @@
 
 import { application } from "./application"
 
-import AddWithAjaxController from "./add_with_ajax_controller.js"
-application.register("add-with-ajax", AddWithAjaxController)
+import DragAndDropController from "./drag_and_drop_controller"
+application.register("drag-and-drop", DragAndDropController)
