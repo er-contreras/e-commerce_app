@@ -16,7 +16,23 @@ class CartControllerTest < ActionDispatch::IntegrationTest
       post '/add', params: { id: 1 }, xhr: true
     end
 
-    assert_response :success
+    assert_redirected_to catalog_index_path
     assert_equal 1, Cart.find(@request.session[:cart_id]).cart_items.size
+  end
+
+  def test_removing
+    post '/add', params: { id: 1 }
+    assert_equal [Book.find(1)], Cart.find(@request.session[:cart_id]).books
+
+    delete '/add', params: { id: 1 }
+    assert_equal [], Cart.find(@request.session[:cart_id]).books
+  end
+
+  def test_removing_with_xhr
+    post '/add', params: { id: 1 }, xhr: true
+    assert_equal [Book.find(1)], Cart.find(@request.session[:cart_id]).books
+
+    delete '/add', params: { id: 1 }
+    assert_equal [], Cart.find(@request.session[:cart_id]).books
   end
 end

@@ -18,4 +18,15 @@ class Cart < ApplicationRecord
     end
     cart_item
   end
+
+  def remove(book_id)
+    ci = cart_items.find_by(book_id: book_id)
+
+    if ci.amount > 1
+      ci.update_attribute(:amount, ci.amount - 1)
+    else
+      CartItem.destroy(ci.id)
+    end
+    ci
+  end
 end
