@@ -25,5 +25,9 @@ class CartController < ApplicationController
     end
   end
 
-  def clear; end
+  def clear
+    @cart.cart_items.destroy_all
+    flash[:cart_notice] = 'Cleared the cart'
+    format.html { redirect_to catalog_index_path }
+  end
 end
