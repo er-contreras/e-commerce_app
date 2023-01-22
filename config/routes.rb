@@ -20,8 +20,8 @@ Rails.application.routes.draw do
 
   # get 'add', to: 'cart#add'
   post 'add', to: 'cart#add'
-  delete 'add', to: 'cart#remove'
-  patch 'add', to: 'cart#clear'
+  delete 'remove', to: 'cart#remove'
+  delete 'clear', to: 'cart#clear'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
