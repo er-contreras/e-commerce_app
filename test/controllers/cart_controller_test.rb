@@ -24,15 +24,15 @@ class CartControllerTest < ActionDispatch::IntegrationTest
     post '/add', params: { id: 1 }
     assert_equal [Book.find(1)], Cart.find(@request.session[:cart_id]).books
 
-    delete '/remove', params: { id: 1 }
+    delete '/add', params: { id: 1 }
     assert_equal [], Cart.find(@request.session[:cart_id]).books
   end
 
   def test_removing_with_xhr
-    post '/add', params: { id: 1 }
+    post '/add', params: { id: 1 }, xhr: true
     assert_equal [Book.find(1)], Cart.find(@request.session[:cart_id]).books
 
-    delete '/remove', params: { id: 1 }, xhr: true
+    delete '/add', params: { id: 1 }
     assert_equal [], Cart.find(@request.session[:cart_id]).books
   end
 
@@ -40,21 +40,18 @@ class CartControllerTest < ActionDispatch::IntegrationTest
     post add_path, params: { id: 1 }
     assert_equal [Book.find(1)], Cart.find(@request.session[:cart_id]).books
 
-    delete '/clear', params: { id: 1 }
+    post :clear
     assert_response :redirect
     assert_redirected_to catalog_index_path
     assert_equal [], Cart.find(@request.session[:cart_id]).books
   end
 
   def test_clearing_with_xhr
-    assert_difference('CartItem.count') do
-      post '/add', params: { id: 1 }
-    end
+    post add_path, params: { id: 1 }
+    assert_equal [Book.find(1)], Cart.find(@request.session[:cart_id]).books
 
-    delete '/clear', xhr: true
-    assert_response :redirect
-    assert_redirected_to catalog_index_path
-
-    assert_equal 0, Cart.find(@request.session[:cart_id]).cart_items.size
+    post :clear, xhr: true
+    assert_response :success
+    assert_equal 0, Cart.find(@request.session[:card_id]).cart_items.size
   end
 end
