@@ -1,2 +1,5 @@
 <%= link_to item.book.title, action: "show", controller: "catalog", id: item.book.id %>
 <%= pluralize(item.amount, "pc", "pcs") %>, $<%= sprintf("%0.2f", item.price * item.amount) %>
+
+<!-- We can also set data: { turbo: "false" } if we don't want our request to be Ajax -->
+<%= button_to 'Remove book', remove_path(id: item.book.id), method: :delete, remote: true, form: { data: { turbo_confirm: 'Are you sure?' } } %>
