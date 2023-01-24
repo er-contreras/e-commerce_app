@@ -18,7 +18,6 @@ Rails.application.routes.draw do
   patch '/book/:id/move', to: 'catalog#move'
   get 'catalog/data'
 
-  # get 'add', to: 'cart#add'
   post 'add', to: 'cart#add'
   delete 'remove', to: 'cart#remove'
   delete 'clear', to: 'cart#clear'
