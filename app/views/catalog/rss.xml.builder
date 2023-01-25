@@ -5,7 +5,7 @@ xml.rss('version' => '2.0', 'xmlns:dc' => 'http://purl.org/dc/elements/1.1/') do
     xml.title @page_title
     xml.link(url_for(action: 'index', only_path: false))
     xml.ttl '40'
-    xml.description 'Emporium: Books for people'
+    xml.description 'Dream Library: Books for people'
 
     @books.each do |book|
       xml.item do
