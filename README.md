@@ -17,13 +17,16 @@
   - Implementing the user stories
   - Use Ajax request to add book to the cart
 - Drag and Drop
-  
-
+  - Implementing...
 
 ## Built With
 
 - Major languages: Ruby
 - Frameworks: Rails
+- Databases: PostgreSQL
+- Tested: miniTest
+- Search Engine: pg search
+- Linters: Rubocop
 
 ## Live Demo
 
@@ -34,10 +37,6 @@
 
 To get a local copy up and running follow these simple example steps.
 
-### Clone Repo
-```
-type 'git clone https://github.com/er-contreras/e-commerce_app'
-```
 ### Install
 ```
 run 'bundle install'
