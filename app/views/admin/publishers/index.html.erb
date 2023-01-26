@@ -12,7 +12,7 @@
       <tr>
         <td><%= link_to "#{publisher.name}", admin_publisher_path(publisher) %></td>
         <td><%= link_to 'Edit', edit_admin_publisher_path(publisher) %></td>
-        <td><%= link_to 'Destroy', admin_publisher_path(publisher), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', admin_publisher_path(publisher), data: { "turbo-method": :delete, confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
