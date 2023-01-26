@@ -8,7 +8,6 @@ class Admin::PublishersController < ApplicationController
 
   # GET /publishers/1 or /publishers/1.json
   def show
-    @publisher = Publisher.find(params[:id])
     @page_title = @publisher.name
   end
 
@@ -18,9 +17,7 @@ class Admin::PublishersController < ApplicationController
   end
 
   # GET /publishers/1/edit
-  def edit
-    @publisher = Publisher.find(params[:id])
-  end
+  def edit; end
 
   # POST /publishers or /publishers.json
   def create
