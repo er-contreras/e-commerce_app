@@ -18,7 +18,7 @@
         <td><%=h book.isbn %></td>
         <td><%= link_to "#{book.title}", admin_book_path(book) %></td>
         <td><%= link_to 'Edit', edit_admin_book_path(book) %></td>
-        <td><%= link_to 'Destroy', admin_book_path(book), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', admin_book_path(book), data: { turbo_method: :delete, confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
