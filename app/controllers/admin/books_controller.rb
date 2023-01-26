@@ -1,26 +1,22 @@
 class Admin::BooksController < ApplicationController
   before_action :set_admin_book, only: %i[show edit update destroy]
 
-  # GET /admin/books or /admin/books.json
   def index
     @page_title = 'Listing books'
     @books = Book.all
   end
 
-  # GET /admin/books/1 or /admin/books/1.json
   def show
     @book = Book.find(params[:id])
     @page_title = @book.title.to_s
   end
 
-  # GET /admin/books/new
   def new
     @book = Book.new
     @publishers = Publisher.all
     @authors = Author.all
   end
 
-  # GET /admin/books/1/edit
   def edit
     @page_title = 'Editing book'
     @book = Book.find(params[:id])
@@ -28,7 +24,6 @@ class Admin::BooksController < ApplicationController
     @authors = Author.all
   end
 
-  # POST /admin/books or /admin/books.json
   def create
     @book = Book.new(admin_book_params)
     @publishers = Publisher.all
@@ -45,7 +40,6 @@ class Admin::BooksController < ApplicationController
     end
   end
 
-  # PATCH/PUT /admin/books/1 or /admin/books/1.json
   def update
     respond_to do |format|
       if @book.update(admin_book_params)
@@ -58,7 +52,6 @@ class Admin::BooksController < ApplicationController
     end
   end
 
-  # DELETE /admin/books/1 or /admin/books/1.json
   def destroy
     @book.destroy
 
@@ -70,14 +63,11 @@ class Admin::BooksController < ApplicationController
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
   def set_admin_book
     @book = Book.find(params[:id])
   end
 
-  # Only allow a list of trusted parameters through.
   def admin_book_params
-    # params.fetch(:book, {})
     params.require(:book).permit(
       :title,
       :publisher_id,

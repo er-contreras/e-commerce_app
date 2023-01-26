@@ -1,27 +1,21 @@
 class Admin::PublishersController < ApplicationController
   before_action :set_publisher, only: %i[show edit update destroy]
 
-  # GET /publishers or /publishers.json
   def index
     @publishers = Publisher.all
   end
 
-  # GET /publishers/1 or /publishers/1.json
   def show
     @page_title = @publisher.name
   end
 
-  # GET /publishers/new
   def new
     @publisher = Publisher.new
   end
 
-  # GET /publishers/1/edit
   def edit; end
 
-  # POST /publishers or /publishers.json
   def create
-    # raise params.inspect
     @publisher = Publisher.new(publisher_params)
 
     respond_to do |format|
@@ -35,7 +29,6 @@ class Admin::PublishersController < ApplicationController
     end
   end
 
-  # PATCH/PUT /publishers/1 or /publishers/1.json
   def update
     respond_to do |format|
       if @publisher.update(publisher_params)
@@ -48,7 +41,6 @@ class Admin::PublishersController < ApplicationController
     end
   end
 
-  # DELETE /publishers/1 or /publishers/1.json
   def destroy
     @publisher.destroy
 
@@ -60,14 +52,11 @@ class Admin::PublishersController < ApplicationController
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
   def set_publisher
     @publisher = Publisher.find(params[:id])
   end
 
-  # Only allow a list of trusted parameters through.
   def publisher_params
-    # params.fetch(:publisher, {})
     params.require(:publisher).permit(:name)
   end
 end

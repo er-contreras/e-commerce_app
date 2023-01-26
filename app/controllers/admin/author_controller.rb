@@ -32,7 +32,6 @@ class Admin::AuthorController < ApplicationController
   end
 
   def update
-    # raise params.inspect
     @author = Author.find(params[:id])
 
     # author_params == first_name: params[:author][:first_name], last_name: params[:author][:last_name]

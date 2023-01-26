@@ -19,9 +19,7 @@ class CartController < ApplicationController
 
     respond_to do |format|
       flash[:cart_notice] = "Book removed #{@item.book.title}"
-      # The ajax request could respond with an html
       format.html { redirect_to catalog_index_path }
-      # format.js
     end
   end
 
