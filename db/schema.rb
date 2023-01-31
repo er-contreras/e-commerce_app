@@ -80,13 +80,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_04_030839) do
     t.integer "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "position"
   end
 
   create_table "carts", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "position"
   end
 
   create_table "pg_search_documents", force: :cascade do |t|
