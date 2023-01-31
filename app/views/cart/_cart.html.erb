@@ -6,17 +6,17 @@
 
 <ul>
   <% @cart.cart_items.each { |item| %>
-  <li id="cart_item_<%=  item.book.id  %>">
-    <%=  render partial: 'cart/item', object: item  %>
-  </li>
-  <%  } %>
+    <li id="cart_item_<%= item.book.id %>">
+      <%= render partial: 'cart/item', object: item %>
+    </li>
+  <% } %>
 </ul>
 
 <p id="cart_total"><strong>Total: $<%= sprintf("%0.2f", @cart.total) %></strong></p>
 
 <% unless @cart.cart_items.empty? %> <p id="clear_cart_link">
   <small>
-    <%= button_to 'Clear cart', clear_path, method: :delete, remote: true, form: {data: {turbo_confirm: 'Are you sure?'}} %>
+    <%= button_to 'Clear cart', clear_path, method: :delete, remote: true, form: { data: { turbo_confirm: 'Are you sure?' } } %>
   </small>
 </p>
 <% end %>
