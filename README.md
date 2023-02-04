@@ -43,7 +43,7 @@ run 'bundle install'
 ```
 ### Create Database
 ```
-run 'rails db:create' and 'rails db:migrate'
+run 'rails db:create', 'rails db:migrate', rails db:setup or rails db:seed
 ```
 ### Run Server
 ```
