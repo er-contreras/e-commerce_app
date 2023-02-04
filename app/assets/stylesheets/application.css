@@ -30,6 +30,10 @@ body {
   font-size: 3rem;
 }
 
+button {
+  cursor: pointer;
+}
+
 #notice {
   padding: 5px;
   background-color: #96ff88;
