@@ -16,7 +16,7 @@
 
 <% unless @cart.cart_items.empty? %> <p id="clear_cart_link">
   <small>
-    <%= button_to 'Clear cart', clear_path, method: :delete, remote: true, form: { data: { turbo_confirm: 'Are you sure?' } } %>
+    <%= button_to 'Clear cart', clear_path, method: :delete, remote: true, form: { data: { turbo_confirm: 'Are you sure?' } }, class: "clear_cart" %>
   </small>
 </p>
 <% end %>
