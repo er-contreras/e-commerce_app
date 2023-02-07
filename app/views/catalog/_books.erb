@@ -1,6 +1,6 @@
 <ul id="books" >
   <% @books.each { |book| %>
-    <li class="book" data-id="<%=  book.id  %>" >
+    <li class="book" data-id="<%= book.id %>" draggable="true" data-controller="drag-and-drop" >
       <dl>
         <dt><%= link_to book.title, action: "show", id: book %></dt>
         <dt><%= book.title %></dt>
