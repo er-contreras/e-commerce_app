@@ -4,5 +4,5 @@
 
 import { application } from "./application"
 
-import DragAndDropController from "./drag_and_drop_controller"
-application.register("drag-and-drop", DragAndDropController)
+import BooksController from "./books_controller"
+application.register("books", BooksController)
