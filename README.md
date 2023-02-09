@@ -27,6 +27,7 @@
 - Tested: miniTest
 - Search Engine: pg search
 - Linters: Rubocop
+- Hotwire(Turbo and Stimulus)
 
 ## Live Demo
 
@@ -50,7 +51,7 @@ run 'rails db:create', 'rails db:migrate', rails db:setup or rails db:seed
 ```
 ### Run Server
 ```
-run 'rails server' or a shortcut 'rails s'
+run 'rails server' or a shortcut 'rails s' if you are using stimulus run 'bin/dev'
 ```
 ### Run tests
 ```
