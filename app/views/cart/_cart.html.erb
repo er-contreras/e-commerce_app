@@ -4,7 +4,7 @@
 
 <h3>Your Shopping Cart</h3>
 
-<ul>
+<ul data-controller="droppable" data-action="drop->droppable#drop dragover->droppable#dragOver">
   <% @cart.cart_items.each { |item| %>
     <li id="cart_item_<%= item.book.id %>">
       <%= render partial: 'cart/item', object: item %>
