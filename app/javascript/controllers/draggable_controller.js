@@ -6,12 +6,15 @@ export default class extends Controller {
 
   dragStart(event) {
     console.log("In drag start", this.element)
-    console.log("In drag start", event.target)
+    console.log("In drag start1", event.target.dataset.id)
+    // console.log("In drag start2", this.bookTarget)
     event.target.style.opacity = "0.5";
-    this.dragSrcEl = event.target;
+    // this.dragSrcEl = event.target;
 
     event.dataTransfer.effectAllowed = "move";
-    event.dataTransfer.setData("text/html", event.target.innerHTML);
+    // event.dataTransfer.setData("text/html", event.target.innerHTML);
+
+    event.dataTransfer.setData("text/data", event.target.dataset.id)
   }
 
   dragEnter(event) {
@@ -39,8 +42,9 @@ export default class extends Controller {
   }
 
 
-  dragEnd() {
+  dragEnd(event) {
     console.log("I'm drag end")
+    event.target.classList.remove("over");
     this.resetOpacity();
   }
 
