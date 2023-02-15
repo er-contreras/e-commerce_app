@@ -7,7 +7,6 @@ export default class extends Controller {
   dragStart(event) {
     console.log("In drag start", this.element)
     console.log("In drag start1", event.target.dataset.id)
-    // console.log("In drag start2", this.bookTarget)
     event.target.style.opacity = "0.5";
     // this.dragSrcEl = event.target;
 

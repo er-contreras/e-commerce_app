@@ -4,8 +4,6 @@ import {Controller} from "@hotwired/stimulus"
 export default class extends Controller {
   drop(event) {
     console.log("I'm in drop, ID:", event.dataTransfer.getData("text/data"))
-    // console.log("I'm in drop2, ", this.dragSrcEl.dataset.id)
-    // event.preventDefault();
     event.stopPropagation();
 
     // Add the item with the specified id to the cart
