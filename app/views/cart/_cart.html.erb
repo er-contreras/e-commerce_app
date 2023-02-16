@@ -1,22 +1,24 @@
-<% if flash[:cart_notice] %>
-  <%= render partial: "cart/cart_notice" %>
-<% end %>
+<div style="height: 100%" data-controller="droppable" data-action="drop->droppable#drop dragover->droppable#dragOver">
+  <% if flash[:cart_notice] %>
+    <%= render partial: "cart/cart_notice" %>
+  <% end %>
 
-<h3>Your Shopping Cart</h3>
+  <h3>Your Shopping Cart</h3>
 
-<ul data-controller="droppable" data-action="drop->droppable#drop dragover->droppable#dragOver">
-  <% @cart.cart_items.each { |item| %>
-    <li id="cart_item_<%= item.book.id %>">
-      <%= render partial: 'cart/item', object: item %>
-    </li>
-  <% } %>
-</ul>
+  <ul>
+    <% @cart.cart_items.each { |item| %>
+      <li id="cart_item_<%= item.book.id %>">
+        <%= render partial: 'cart/item', object: item %>
+      </li>
+    <% } %>
+  </ul>
 
-<p id="cart_total"><strong>Total: $<%= sprintf("%0.2f", @cart.total) %></strong></p>
+  <p id="cart_total"><strong>Total: $<%= sprintf("%0.2f", @cart.total) %></strong></p>
 
-<% unless @cart.cart_items.empty? %> <p id="clear_cart_link">
+  <% unless @cart.cart_items.empty? %> <p id="clear_cart_link">
   <small>
     <%= button_to 'Clear cart', clear_path, method: :delete, remote: true, form: { data: { turbo_confirm: 'Are you sure?' } }, class: "clear_cart" %>
   </small>
 </p>
-<% end %>
+  <% end %>
+</div>
