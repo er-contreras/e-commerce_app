@@ -17,7 +17,7 @@
   - Implementing the user stories
   - Use Ajax request to add book to the cart
 - Drag and Drop
-  - Implementing...
+  - Be able to add a book to the cart by dragging it
 
 ## Built With
 
