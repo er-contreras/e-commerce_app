@@ -11,21 +11,22 @@ export default class extends Controller {
 
     fetch("/add", {
       method: "POST",
+      mode: 'cors',
+      cache: 'default',
       credentials: "same-origin",
       headers: {
-        // Accept: "text/vnd.turbo-stream.html",
+        Accept: "text/vnd.turbo-stream.html, text/html, application/xhtml+xml",
         "Content-Type": "application/json",
         "X-CSRF-Token": document.head.querySelector("[name='csrf-token']").content,
       },
+      redirect: 'follow',
+      referrerPolicy: "no-referrer-when-downgrade",
       body: JSON.stringify({
-        // source_id: this.dragSrcEl.dataset.id,
-        // target_id: event.target.dataset.id,
         id: +id
       }),
-    })
-        .then((response) => response.text())
-        // .then((data) => console.log(data))
-        .then(Turbo.renderStreamMessage);
+    }).then(() => {
+      Turbo.visit("/catalog/index");
+    });
   }
 
   dragOver(event) {
