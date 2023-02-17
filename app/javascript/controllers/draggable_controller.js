@@ -5,19 +5,12 @@ export default class extends Controller {
   static targets = ["book"]
 
   dragStart(event) {
-    console.log("In drag start", this.element)
-    console.log("In drag start1", event.target.dataset.id)
     event.target.style.opacity = "0.5";
-    // this.dragSrcEl = event.target;
-
     event.dataTransfer.effectAllowed = "move";
-    // event.dataTransfer.setData("text/html", event.target.innerHTML);
-
     event.dataTransfer.setData("text/data", event.target.dataset.id)
   }
 
   dragEnter(event) {
-    console.log("In the drag enter", event.target)
     event.target.classList.add("over");
 
     if (event.preventDefault) {
@@ -27,7 +20,6 @@ export default class extends Controller {
   }
 
   dragOver(event) {
-    console.log("In drag over")
     if (event.preventDefault) {
       event.preventDefault();
     }
@@ -35,14 +27,12 @@ export default class extends Controller {
   }
 
   dragLeave(event) {
-    console.log("In drag leave")
     event.target.classList.remove("over");
     this.resetOpacity();
   }
 
 
   dragEnd(event) {
-    console.log("I'm drag end")
     event.target.classList.remove("over");
     this.resetOpacity();
   }

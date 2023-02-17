@@ -3,9 +3,6 @@ import {Controller} from "@hotwired/stimulus"
 // Connects to data-controller="droppable"
 export default class extends Controller {
   drop(event) {
-    console.log("I'm in drop, ID:", event.dataTransfer.getData("text/data"))
-    event.stopPropagation();
-
     // Add the item with the specified id to the cart
     const id = event.dataTransfer.getData("text/data")
 
