@@ -2,8 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+#content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  h1 {
+    //margin:  0 0 0 52rem;
+  }
+}
+
 #books {
   display: flex;
+  justify-content: center;
+  //margin:  0 0 0 12rem;
   list-style: none;
 }
 
@@ -11,32 +23,13 @@
   float: left;
   border: 4px solid #ccc;
   background-color: #fff;
-  margin: 10px;
+  margin: 3rem;
   padding: 5px;
   cursor: pointer;
   box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
-}
-
-#content {
-  display: flex;
-  flex-direction: column;
+  min-width: 35rem;
 }
 
 .add_to_cart {
   text-decoration: none;
-}
-
-#menu {
-  border: 1px solid #730E15;
-  background-color: #58A986;
-}
-
-#menu a {
-  text-decoration: none;
-  color: brown;
-  border: 1px solid #730E15;
-  padding: 10px 20px;
-  background-color: antiquewhite;
-  width: 15rem;
-  text-align: center;
 }
