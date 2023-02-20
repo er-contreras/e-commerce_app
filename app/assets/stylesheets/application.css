@@ -43,6 +43,7 @@ button {
   flex-direction: column;
   text-align: center;
   font-size: 3rem;
+  background-color: #ff8c00;
 }
 
 #menu {
@@ -50,6 +51,21 @@ button {
   justify-content: center;
   border: 1px solid #730e15;
   background-color: #58a986;
+}
+
+#menu ul {
+  display: flex;
+  justify-content: space-around;
+  font-size: 2rem;
+  list-style: none;
+  max-width: 101rem;
+  padding: 3rem;
+}
+
+#menu li {
+  display: flex;
+  justify-content: space-around;
+  width: 50rem;
 }
 
 #menu a {
@@ -60,21 +76,7 @@ button {
   background-color: antiquewhite;
   width: 15rem;
   text-align: center;
-}
-
-#menu li {
-  display: flex;
-  justify-content: space-around;
-  width: 50rem;
-}
-
-#menu ul {
-  display: flex;
-  justify-content: space-around;
-  font-size: 2rem;
-  list-style: none;
-  max-width: 101rem;
-  padding: 3rem;
+  box-shadow: -5px 5px 1px 1px rgb(0 0 0 / 34%);
 }
 
 #footer {
