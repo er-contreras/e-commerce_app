@@ -8,7 +8,7 @@
   text-align: center;
 
   h1 {
-    //margin:  0 0 0 52rem;
+    margin: 1rem 0;
   }
 }
 
@@ -17,6 +17,13 @@
   justify-content: center;
   //margin:  0 0 0 12rem;
   list-style: none;
+
+  button {
+    background-color: rgba(71, 196, 1, 0.94);
+    width: 30%;
+    height: 3rem;
+    margin: 1rem 0;
+  }
 }
 
 .book {
