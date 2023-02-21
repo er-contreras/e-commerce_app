@@ -17,7 +17,7 @@
         <dd>
           <strong>
             <!-- We can also set data: { turbo: "false" } if we don't want our request to be Ajax -->
-            <%= button_to 'Add to cart', add_path(id: book.id), method: :post, remote: true, form: {data: {turbo_confirm: 'Are you sure?'}} %>
+            <%= button_to 'Click or drag to the cart', add_path(id: book.id), method: :post, remote: true, form: {data: {turbo_confirm: 'Are you sure?'}} %>
           </strong>
         </dd>
       </dl>
