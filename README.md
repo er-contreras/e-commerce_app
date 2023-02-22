@@ -18,6 +18,8 @@
   - Use Ajax request to add book to the cart
 - Drag and Drop
   - Be able to add a book to the cart by dragging it
+- Forum Implementation
+  - 
 
 ## Built With
 
