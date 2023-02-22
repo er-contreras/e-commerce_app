@@ -76,7 +76,7 @@ button {
   background-color: antiquewhite;
   width: 15rem;
   text-align: center;
-  box-shadow: -5px 5px 1px 1px rgb(0 0 0 / 34%);
+  box-shadow: -5px 5px 1px 1px rgba(0,0,0,.3);
 }
 
 #footer {
