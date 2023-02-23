@@ -3,8 +3,7 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 #shopping_cart {
-  border-left: 3px solid #666;
-  background: lightslategray;
+  border-left: 1px solid #666;
   position: fixed;
   bottom: 0;
   right: 0;
@@ -24,9 +23,8 @@
   li {
     display: flex;
     flex-direction: column;
-    border: 10px solid lightgray;
+    border: 1px solid lightgray;
     padding: 10px 0;
-    background-color: aliceblue;
     color: black;
     font-size: 1.5rem;
     max-width: 90%;
@@ -34,7 +32,6 @@
 
 
     button {
-      background-color: #B2FFD3;
       padding: .5rem;
       margin-top: 15px;
     }
@@ -46,16 +43,14 @@
 }
 
 #cart_notice {
-  border: 2px solid #58A986;
-  background: #B2FFD3;
+  border: 1px solid #2f2f2f;
   padding: 2rem;
   color: #666666;
 }
 
 .clear_cart {
-  background-color: #cc0000;
   padding: .5rem;
-  color: white;
+  color: #000000;
   width: 30%;
   height: 3rem;
   margin: 1rem 0;

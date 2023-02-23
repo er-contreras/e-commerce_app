@@ -35,7 +35,6 @@ button {
 
 #notice {
   padding: 5px;
-  background-color: #96ff88;
 }
 
 #header {
@@ -43,14 +42,12 @@ button {
   flex-direction: column;
   text-align: center;
   font-size: 3rem;
-  background-color: #ff8c00;
 }
 
 #menu {
   display: flex;
   justify-content: center;
   border: 1px solid #730e15;
-  background-color: #58a986;
 }
 
 #menu ul {
@@ -70,13 +67,11 @@ button {
 
 #menu a {
   text-decoration: none;
-  color: brown;
-  border: 1px solid #730e15;
+  border: 1px solid #1f1f1f;
   padding: 10px 20px;
-  background-color: antiquewhite;
   width: 15rem;
   text-align: center;
-  box-shadow: -5px 5px 1px 1px rgba(0,0,0,.3);
+  box-shadow: -5px 5px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 #footer {
@@ -84,7 +79,6 @@ button {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: red;
   color: white;
   text-align: center;
   font-size: 3rem;
