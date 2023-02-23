@@ -29,6 +29,10 @@ body {
   font-size: 3rem;
 }
 
+a {
+  color: black;
+}
+
 button {
   cursor: pointer;
 }
