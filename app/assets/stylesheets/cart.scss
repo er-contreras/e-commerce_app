@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 #shopping_cart {
-  border-left: 1px solid #666;
+  border: 1px solid black;
   position: fixed;
   bottom: 0;
   right: 0;
@@ -23,7 +23,7 @@
   li {
     display: flex;
     flex-direction: column;
-    border: 1px solid #6b6b6b;
+    border: 1px solid black;
     padding: 10px 0;
     color: black;
     font-size: 1.5rem;
@@ -43,7 +43,7 @@
 }
 
 #cart_notice {
-  border: 1px solid #2f2f2f;
+  border: 1px solid black;
   padding: 2rem;
   color: #666666;
 }
