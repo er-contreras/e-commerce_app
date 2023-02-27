@@ -72,7 +72,7 @@ Type 'ruby test/../..' to a specific test
 
 - GitHub: [@er-contreras](https://github.com/er-contreras)
 - Linkedin: [LinkedIn](https://www.linkedin.com/in/er-contreras/)
-- Twitter: [@ChristianErick_](https://twitter.com/ChristianErick_)
+- Twitter: [@er_contreras_](https://twitter.com/er_contreras_)
 
 
 ## 🤝 Contributing
