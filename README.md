@@ -19,7 +19,7 @@
 - Drag and Drop
   - Be able to add a book to the cart by dragging it
 - Forum Implementation
-  - 
+  - I use Discourse open source to link Dream Library app to a forum.
 
 ## Built With
 
@@ -30,6 +30,9 @@
 - Search Engine: pg search
 - Linters: Rubocop
 - Hotwire(Turbo and Stimulus)
+- Discourse
+
+* Note: I use Discorse locally using a URL as localhost:3001 for the Library app and a localhost:4200 for Discourse. In order to make it work I run Redis and Discourse in my terminal.
 
 ## Live Demo
 
@@ -40,6 +43,10 @@
 #### Full screen to better quality
 
 https://user-images.githubusercontent.com/67211919/220817209-3dda8a35-62f0-4e1c-bf28-6e7c77106da4.mp4
+
+## With Discourse implemented.
+
+https://user-images.githubusercontent.com/67211919/222612463-38c9f971-6588-46a0-beb0-85511adfa3af.mov
 
 ## Getting Started
 
