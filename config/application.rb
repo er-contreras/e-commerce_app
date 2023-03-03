@@ -19,8 +19,5 @@ module ECommerceApp
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
-
-    config.discourse_sso_secret = 'your_sso_secret_key'
-    config.discourse_sso_url = 'https://your-discourse-site.com/session/sso_login'
   end
 end
