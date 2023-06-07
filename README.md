@@ -53,7 +53,7 @@ https://user-images.githubusercontent.com/67211919/222612463-38c9f971-6588-46a0-
 To get a local copy up and running follow these simple example steps.
 
 #### Install
-``run 'bundle install'``
+``run 'bundle install', 'yarn install' or 'npm install'``
 #### Create Database
 ``run 'rails db:create', 'rails db:migrate', rails db:setup or rails db:seed``
 #### Run Server
