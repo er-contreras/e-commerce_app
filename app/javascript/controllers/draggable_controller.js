@@ -6,6 +6,7 @@ export default class extends Controller {
 
   dragStart(event) {
     event.target.style.opacity = "0.5";
+    event.target.style.backgroundColor = "white";
     event.dataTransfer.effectAllowed = "move";
     event.dataTransfer.setData("text/data", event.target.dataset.id)
   }
