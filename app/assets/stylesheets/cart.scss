@@ -52,3 +52,11 @@
   height: 3rem;
   margin: 1rem 0;
 }
+
+// Adapting the cart for mobile
+
+@media only screen and (max-width: 1550px) {
+  #shopping_cart {
+    display: none;
+  }
+}
