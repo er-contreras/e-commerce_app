@@ -44,3 +44,9 @@
     flex-direction: column;
   }
 }
+
+@media only screen and (max-width: 400px) {
+  .book {
+    min-width: 20rem;
+  }
+}
