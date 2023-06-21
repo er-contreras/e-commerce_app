@@ -53,7 +53,15 @@
   margin: 1rem 0;
 }
 
-// Adapting the cart for mobile
+.container_cart_close_button {
+  text-align: left;
+  padding: 1rem;
+
+  a {
+    border: 1px solid gray;
+    text-decoration: none;
+  }
+}
 
 @media only screen and (max-width: 1550px) {
   #shopping_cart {

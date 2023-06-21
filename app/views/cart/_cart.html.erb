@@ -1,4 +1,8 @@
 <div style="height: 100%" data-controller="droppable" data-action="drop->droppable#drop dragover->droppable#dragOver">
+  <div class="container_cart_close_button">
+    <%= link_to "X", class: "cart_close_button" %>
+  </div>
+
   <% if flash[:cart_notice] %>
     <%= render partial: "cart/cart_notice" %>
   <% end %>
