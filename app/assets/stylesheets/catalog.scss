@@ -36,3 +36,11 @@
   box-shadow: -11px 14px 6px 0px rgba(0,0,0,.5);
   min-width: 35rem;
 }
+
+// Responsive design for mobile devices
+@media only screen and (max-width: 844px) {
+  #books {
+    display: flex;
+    flex-direction: column;
+  }
+}
