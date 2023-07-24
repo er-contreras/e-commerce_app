@@ -3,7 +3,7 @@ class Admin::BooksController < ApplicationController
 
   def index
     @page_title = 'Listing books'
-    @books = Book.all
+    @books = Book.includes(:publisher)
   end
 
   def show
