@@ -3,15 +3,13 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 #shopping_cart {
-  border: 1px solid black;
-  position: fixed;
-  bottom: 0;
-  right: 0;
+  border-left: 1px solid black;
   width: 300px;
-  height: 100%;
+  min-height: 100vh;
   text-align: center;
   color: black;
   background-color: white;
+  flex-shrink: 0;
 
   ul {
     list-style: none;
@@ -63,7 +61,7 @@
   }
 }
 
-@media only screen and (max-width: 1550px) {
+@media only screen and (max-width: 1000px) {
   #shopping_cart {
     display: none;
   }
