@@ -41,6 +41,23 @@ button {
   cursor: pointer;
 }
 
+#app-wrapper {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+#layout-main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+#header, #menu {
+  width: 100%;
+}
+
 #notice {
   padding: 5px;
 }

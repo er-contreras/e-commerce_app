@@ -12,37 +12,40 @@
   </head>
 
   <body>
-    <div id="header">
-      <h1 id="logo">Dream Library&trade;</h1>
-      <h2 id="slogan">Books on Rails</h2>
-    </div>
+    <div id="app-wrapper">
+      <div id="layout-main">
+        <div id="header">
+          <h1 id="logo">Dream Library&trade;</h1>
+          <h2 id="slogan">Books on Rails</h2>
+        </div>
 
-    <div id="menu">
-      <ul>
-        <li><a href="/admin/author">Authors</a></li>
-        <li><a href="/admin/publishers">Publishers</a></li>
-        <li><a href="/admin/books">Books</a></li>
-        <li><a href="/catalog/index">Catalog</a></li>
-        <li><a href="/about/index">About</a></li>
-        <li><a href="http://localhost:4200/">Forum</a></li>
-      </ul>
-    </div>
+        <div id="menu">
+          <ul>
+            <li><a href="/admin/author">Authors</a></li>
+            <li><a href="/admin/publishers">Publishers</a></li>
+            <li><a href="/admin/books">Books</a></li>
+            <li><a href="/catalog/index">Catalog</a></li>
+            <li><a href="/about/index">About</a></li>
+            <li><a href="http://localhost:4200/">Forum</a></li>
+          </ul>
+        </div>
 
-    <div id="content">
-      <h1><%= "#{@page_title}" if @page_title %></h1>
-      <% if flash[:notice] %>
-        <div id="notice">
-          <%= flash[:notice] %>
+        <div id="content">
+          <h1><%= "#{@page_title}" if @page_title %></h1>
+          <% if flash[:notice] %>
+            <div id="notice">
+              <%= flash[:notice] %>
+            </div>
+          <% end %>
+          <%= yield %>
+        </div>
+      </div>
+
+      <% if @cart %>
+        <div id="shopping_cart">
+          <%= render partial: "cart/cart" %>
         </div>
       <% end %>
-      <%= yield %>
-    </div>
-
-    <% if @cart %>
-      <div id="shopping_cart">
-        <%= render partial: "cart/cart" %>
-      </div>
-    <% end %>
 
     <div id="footer">
       &copy; 2022-2023 Dream Library
