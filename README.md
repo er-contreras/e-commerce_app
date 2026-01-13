@@ -50,50 +50,33 @@ https://user-images.githubusercontent.com/67211919/222612463-38c9f971-6588-46a0-
 
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps.
+### Prerequisites
+* Docker and Docker Compose
+* Node.js & Yarn (for Discourse local development)
 
-## Install
-*Be sure to have install Ruby 3.1.3. I use Rbenv to install different versions of Ruby but you can use 
-any package manager you like.
+### 🛠 Installation & Setup
 
-```bash
-bundle install --path vendor/bundle
-```
-```bash
-yarn install
-```
- or
-```bash
-npm install
-```
-## Create Database
-```bash
-rails db:create
-```
-```bash
-rails db:migrate
-```
-```bash
-rails db:setup
-```
-```bash
-rails db:seed
-```
-
-## Run Server
-```bash
-rails server
-```
-or a shortcut 'rails s' if you are using stimulus run 'bin/dev'
+1. **Clone the repository**
+   ```bash
+   git clone git@github.com:er-contreras/e-commerce_app.git
+   cd e-commerce_app
+   ```
+2. **Build & up with Docker**
+   ```bash
+   sudo docker compose build
+   sudo docker compose run web rails db:create db:migrate
+   sudo docker compose run web yarn add sass
+   sudo docker compose up
+   ```
 
 ## Run tests
 in the console to run all tests Or Type ```ruby test/another/path``` to a specific test
 
 ```bash
-rails test
+sudo docker compose run --rm web rails test
 ```
 
-## For forum usage 
+## For forum usage. *Temporarily out of services
 *In this case we are running our main app in port 3001 in order to let discourse use the port 3000
 
 In your terminal:
