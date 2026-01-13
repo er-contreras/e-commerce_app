@@ -1,0 +1,35 @@
+services:
+  db:
+    image: postgres:14
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/
+    environment:
+      POSTGRES_PASSWORD: password
+
+  redis:
+    image: redis:7-alpine
+    volumes:
+      - redis_data:/data
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    command: bin/dev
+    volumes:
+      - .:/app
+    ports:
+      - "3001:3001"
+    environment:
+      - DATABASE_HOST=db
+      - DATABASE_USER=postgres
+      - DATABASE_PASSWORD=password
+      - REDIS_URL=redis://redis:6379/1
+    depends_on:
+      - db
+      - redis
+    stdin_open: true
+    tty: true
+
+volumes:
+  redis_data:
