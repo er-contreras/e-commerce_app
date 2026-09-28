@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'catalog#index'
+
   get 'about/index'
 
   namespace :admin do
