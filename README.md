@@ -1,7 +1,8 @@
 # E-Commerce App
+This repo holds a E-Commerce app that creates books and save it in a cart, you can drag and drop any book into the cart section
+so you can be able to buy them.
 
 ## Features implemented
-
 - Implement the about user story
 - Author Management
   - Unit testing
@@ -22,7 +23,6 @@
   - I use Discourse open source to link Dream Library app to a forum.
 
 ## Built With
-
 - Major languages: Ruby 3.1.3
 - Frameworks: Rails 7.0.1
 - Databases: PostgreSQL
@@ -34,9 +34,9 @@
 
 * Note: I use Discorse locally using a URL as localhost:3001 for the Library app and a localhost:4200 for Discourse. In order to make it work I run Redis and Discourse in my terminal.
 
-## Live Demo
+## 🔴 Live Demo
 
-[Under Construction](https://livedemo.com)
+[E-Commerce App](https://e-commerce-app-tydw.onrender.com/)
 
 ## Date of current video 22/02/2023
 
