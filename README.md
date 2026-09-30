@@ -75,23 +75,6 @@ in the console to run all tests Or Type ```ruby test/another/path``` to a specif
 sudo docker compose run --rm web rails test
 ```
 
-## For forum usage. *Temporarily out of services
-*In this case we are running our main app in port 3001 in order to let discourse use the port 3000
-
-In your terminal:
-## In a separate terminal instance run redis
-```bash
-redis-server
-```
-## In a separate terminal instance, navigate to your discourse folder (cd ~/discourse) and run:
-```bash
-bin/ember-cli
-```
-
-## In a separate terminal instance, navigate to your discourse folder (cd ~/discourse) and run:
-```bash
-rails server
-```
 ## Author
 
 👤 **Erick Contreras**
