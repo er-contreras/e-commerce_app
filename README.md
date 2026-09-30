@@ -2,7 +2,7 @@
 This repo holds a E-Commerce app that creates books and save it in a cart, you can drag and drop any book into the cart section
 so you can be able to buy them.
 
-## 🔴 Live Demo
+## 🔴 Live Demo - Its being use a free tier so wait 50s at least
 [E-Commerce App](https://e-commerce-app-tydw.onrender.com/)
 
 ## Features implemented
