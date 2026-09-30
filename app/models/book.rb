@@ -8,7 +8,7 @@ class Book < ApplicationRecord
   has_one_attached :cover_image
 
   # Shoping Cart Implementation
-  has_many :cart_items
+  has_many :cart_items, dependent: :destroy
   has_many :carts, through: :cart_items
 
   # PG_Search Implementation
