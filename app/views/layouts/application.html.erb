@@ -38,6 +38,10 @@
           <% end %>
           <%= yield %>
         </div>
+
+        <div id="footer">
+          &copy; 2022-2023 Dream Library
+        </div>
       </div>
 
       <% if @cart %>
@@ -45,9 +49,5 @@
           <%= render partial: "cart/cart" %>
         </div>
       <% end %>
-
-    <div id="footer">
-      &copy; 2022-2023 Dream Library
-    </div>
   </body>
 </html>

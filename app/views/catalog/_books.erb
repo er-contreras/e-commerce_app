@@ -4,7 +4,6 @@
         data-action="dragstart->draggable#dragStart dragenter->draggable#dragEnter dragover->draggable#dragOver dragleave->draggable#dragLeave dragend->draggable#dragEnd">
       <dl>
         <dt><%= link_to book.title, action: "show", id: book %></dt>
-        <dt><%= book.title %></dt>
 
         <% book.authors.each { |author| %>
           <dd><%= author.last_name %>, <%= author.first_name %></dd>

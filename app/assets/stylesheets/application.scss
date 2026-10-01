@@ -99,13 +99,8 @@ button {
 }
 
 #footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  color: black;
+  margin-top: 6rem;
   text-align: center;
-  font-size: 3rem;
   padding: 0 6rem;
   border-top: 1px solid black;
   background-color: white;
@@ -114,5 +109,9 @@ button {
 @media only screen and (max-width: 1035px) {
   #menu {
     display: none;
+  }
+
+  #header #logo {
+    font-size: 5rem;
   }
 }
