@@ -24,8 +24,8 @@ so you can be able to buy them.
   - Be able to add a book to the cart by dragging it
 
 ## Built With
-- Major languages: Ruby 3.1.3
-- Frameworks: Rails 7.0.1
+- Major languages: Ruby 3.3.12
+- Frameworks: Rails 7.1.0
 - Databases: PostgreSQL
 - Tested: miniTest
 - Search Engine: pg search
