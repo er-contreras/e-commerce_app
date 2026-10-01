@@ -22,8 +22,6 @@ so you can be able to buy them.
   - Use Ajax request to add book to the cart
 - Drag and Drop
   - Be able to add a book to the cart by dragging it
-- Forum Implementation
-  - I use Discourse open source to link Dream Library app to a forum.
 
 ## Built With
 - Major languages: Ruby 3.1.3
@@ -33,9 +31,6 @@ so you can be able to buy them.
 - Search Engine: pg search
 - Linters: Rubocop
 - Hotwire(Turbo and Stimulus)
-- Discourse
-
-* Note: I use Discorse locally using a URL as localhost:3001 for the Library app and a localhost:4200 for Discourse. In order to make it work I run Redis and Discourse in my terminal.
 
 ## Date of current video 22/02/2023
 
