@@ -21,6 +21,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'jsbundling-rails', '~> 1.0'
 gem 'json', '< 3'
+gem 'minitest', '< 6'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]

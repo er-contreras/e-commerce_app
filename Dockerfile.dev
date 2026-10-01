@@ -14,7 +14,7 @@ RUN npm install --global yarn
 
 WORKDIR /app
 
-COPY Gemfile ./
+COPY Gemfile Gemfile.lock ./
 RUN bundle install
 
 # Install JS dependencies 
