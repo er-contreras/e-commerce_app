@@ -11,7 +11,7 @@ xml.rss('version' => '2.0', 'xmlns:dc' => 'http://purl.org/dc/elements/1.1/') do
       xml.item do
         xml.title(book.title)
         xml.description("#{book.title} by #{book.author_names}")
-        xml.pubDate(book.created_at.to_s(:long))
+        xml.pubDate(book.created_at.rfc822)
         xml.guid(url_for(action: 'show', id: book, only_path: false))
         xml.link(url_for(action: 'show', id: book, only_path: false))
       end
