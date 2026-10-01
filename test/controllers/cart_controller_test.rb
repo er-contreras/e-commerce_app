@@ -7,7 +7,7 @@ class CartControllerTest < ActionDispatch::IntegrationTest
     end
 
     assert_response :redirect
-    assert_redirected_to controller: 'catalog'
+    assert_redirected_to catalog_index_path
     assert_equal 1, Cart.find(@request.session[:cart_id]).cart_items.size
   end
 
