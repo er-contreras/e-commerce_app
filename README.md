@@ -6,22 +6,22 @@ so you can be able to buy them.
 [E-Commerce App](https://e-commerce-app-1-croc.onrender.com/catalog/index/)
 
 ## Features implemented
-- Implement the about user story
-- Author Management
-  - Unit testing
-  - Functional Testing
-  - Integration Testing
-- Book Inventory Management
-  - Implmenting the Publisher Administration Interface
-  - Implementing the Book Administration Interface
-- Book Catalog Browsing
-  - Implementing the Book Catalog Interface
-  - Creating an RSS Feed
-- Shopping Cart Implementation
-  - Implementing the user stories
-  - Use Ajax request to add book to the cart
-- Drag and Drop
-  - Be able to add a book to the cart by dragging it
+- [x] Implement the about user story
+- [x] Author Management
+  - [x] Unit testing
+  - [x] Functional Testing
+  - [x] Integration Testing
+- [x] Book Inventory Management
+  - [x] Implmenting the Publisher Administration Interface
+  - [x] Implementing the Book Administration Interface
+- [x] Book Catalog Browsing
+  - [x] Implementing the Book Catalog Interface
+  - [x] Creating an RSS Feed
+- [x] Shopping Cart Implementation
+  - [x] Implementing the user stories
+  - [x] Use Ajax request to add book to the cart
+- [x] Drag and Drop
+  - [x] Be able to add a book to the cart by dragging it
 
 ## Built With
 - Major languages: Ruby 3.3.12
