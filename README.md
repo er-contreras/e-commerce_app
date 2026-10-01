@@ -32,16 +32,6 @@ so you can be able to buy them.
 - Linters: Rubocop
 - Hotwire(Turbo and Stimulus)
 
-## Date of current video 22/02/2023
-
-## Full screen to better quality
-
-https://user-images.githubusercontent.com/67211919/220817209-3dda8a35-62f0-4e1c-bf28-6e7c77106da4.mp4
-
-## With Discourse implemented.
-
-https://user-images.githubusercontent.com/67211919/222612463-38c9f971-6588-46a0-beb0-85511adfa3af.mov
-
 ## Getting Started
 
 ### Prerequisites
@@ -63,7 +53,7 @@ https://user-images.githubusercontent.com/67211919/222612463-38c9f971-6588-46a0-
    sudo docker compose up
    ```
 
-## Run tests
+### Run tests
 in the console to run all tests Or Type ```ruby test/another/path``` to a specific test
 
 ```bash
@@ -72,7 +62,7 @@ sudo docker compose run --rm web rails test
 
 ## Author
 
-👤 **Erick Contreras**
+👤 **Christian E. Contreras**
 
 - GitHub: [@er-contreras](https://github.com/er-contreras)
 - Linkedin: [LinkedIn](https://www.linkedin.com/in/er-contreras/)
