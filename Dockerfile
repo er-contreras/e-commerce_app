@@ -24,8 +24,12 @@ RUN yarn install --frozen-lockfile
 
 COPY . .
 
+ENV RAILS_ENV=production
+ENV RACK_ENV=production
+
 RUN yarn build:css && \
     SECRET_KEY_BASE=dummy RAILS_ENV=production bundle exec rake assets:precompile
 
 EXPOSE 3001
+
 CMD ["bash", "-c", "bundle exec rails db:migrate && bundle exec puma -C config/puma.rb"]
