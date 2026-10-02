@@ -50,9 +50,9 @@ so you can be able to buy them.
 2. **Build & up with Docker**
    ```bash
    sudo docker compose build
-   sudo docker compose run web rails db:create db:migrate
+   sudo docker compose run web rails db:create db:migrate db:seed
    sudo docker compose run web yarn add sass
-   sudo docker compose up
+   sudo docker compose up -d
    ```
 
 ### Run tests
