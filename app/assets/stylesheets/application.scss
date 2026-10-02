@@ -41,6 +41,20 @@ button {
   cursor: pointer;
 }
 
+header {
+  display: flex;
+  padding: 2rem;
+}
+
+form {
+  display: flex;
+}
+
+#logo {
+  font-size: 2rem;
+  text-align: none;
+}
+
 #app-wrapper {
   display: flex;
   width: 100%;
@@ -65,7 +79,6 @@ button {
 #header {
   display: flex;
   flex-direction: column;
-  text-align: center;
   font-size: 3rem;
 }
 
@@ -107,11 +120,22 @@ button {
 }
 
 @media only screen and (max-width: 1035px) {
+
+
   #menu {
     display: none;
   }
 
-  #header #logo {
-    font-size: 5rem;
+  #content {
+    border-top: 1px solid black;
+
+    h1 {
+      color: brown;
+      font-size: 3rem;
+    }
+  }
+
+  #footer {
+    font-size: 2rem;
   }
 }
