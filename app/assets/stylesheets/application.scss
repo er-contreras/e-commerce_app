@@ -43,18 +43,43 @@ button {
 
 header {
   display: flex;
-  padding: 2rem;
+  padding: 1rem;
+  justify-content: space-evenly;
+
+  #header {
+    margin: auto 0;
+  }
 
   form {
     display: flex;
   }
+
+  #hamburger-menu-wrapper {
+    margin: auto 0;
+  }
+
+  #hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 3rem;
+
+    .line {
+      width: 3rem;
+      border: 1px solid black;
+      height: 0.4rem;
+      background-color: black;
+      border-radius: 1rem;
+    }
+  }
+
+  #cart-icon {
+    width: 3rem;
+  }
 }
 
-
-
 #logo {
-  font-size: 2rem;
-  text-align: none;
+  font-size: 1.3rem;
 }
 
 #app-wrapper {
@@ -68,10 +93,6 @@ header {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
-}
-
-#header, #menu {
-  width: 100%;
 }
 
 #notice {
@@ -121,8 +142,16 @@ header {
   background-color: white;
 }
 
-@media only screen and (max-width: 1035px) {
+@media only screen and (min-width: 1035px) {
+  #hamburger-menu-wrapper {
+    display: none;
+  }
+}
 
+@media only screen and (max-width: 1035px) {
+  #cart-icon {
+    width: 3rem !important;
+  }
 
   #menu {
     display: none;
