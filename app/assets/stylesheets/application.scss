@@ -30,15 +30,18 @@ html {
 
 body {
   min-height: 100vh;
-  font-size: 3rem;
+  background-color: #dfdfdf;
 }
 
-a {
-  color: black;
+main {
+  max-width: 1120px;
+  background-color: white;
+  margin: 0 auto;
+  display: flex;
 }
 
-button {
-  cursor: pointer;
+#main-content {
+  width: 100%;
 }
 
 header {
@@ -75,24 +78,12 @@ header {
 
   #cart-icon {
     width: 3rem;
+    cursor: pointer;
   }
 }
 
 #logo {
   font-size: 1.3rem;
-}
-
-#app-wrapper {
-  display: flex;
-  width: 100%;
-  min-height: 100vh;
-}
-
-#layout-main {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  overflow-x: hidden;
 }
 
 #notice {
@@ -106,30 +97,24 @@ header {
 }
 
 #menu {
-  display: flex;
-  justify-content: center;
   border: 1px solid black;
 }
 
 #menu ul {
   display: flex;
   justify-content: space-around;
-  font-size: 2rem;
   list-style: none;
-  max-width: 101rem;
-  padding: 3rem;
+  padding: 1rem;
 }
 
 #menu li {
   display: flex;
   justify-content: space-around;
-  width: 50rem;
 }
 
 #menu a {
   border: 1px solid black;
   padding: 10px 20px;
-  width: 15rem;
   text-align: center;
   box-shadow: -5px 5px 1px 1px rgba(0, 0, 0, 0.3);
 }

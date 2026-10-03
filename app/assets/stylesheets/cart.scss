@@ -3,28 +3,18 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 #shopping_cart {
-  border-left: 1px solid black;
-  width: 300px;
-  min-height: 100vh;
   text-align: center;
-  color: black;
-  background-color: white;
-  flex-shrink: 0;
+  width: 100%;
 
   ul {
     list-style: none;
   }
 
   li {
-    display: flex;
-    flex-direction: column;
     border: 1px solid black;
-    padding: 10px 0;
-    color: black;
-    font-size: 1.5rem;
+    padding: 1rem 0;
     max-width: 90%;
-    margin: 1rem auto;
-
+    margin: 0 auto;
 
     button {
       padding: .5rem;

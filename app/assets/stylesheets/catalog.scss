@@ -13,28 +13,20 @@
 }
 
 #books {
-  display: flex;
-  justify-content: center;
   list-style: none;
 
   button {
-    width: 40%;
-    height: 4rem;
     margin: 1rem 0;
-    font-weight: bold;
     color: black;
-    border: 1px solid black;
   }
 }
 
 .book {
-  float: left;
   border: 1px solid black;
-  margin: 3rem;
-  padding: 5px;
+  margin: 2rem;
+  padding: 1rem;
   cursor: pointer;
   box-shadow: -11px 14px 6px 0px rgba(0,0,0,.5);
-  min-width: 35rem;
 }
 
 // Responsive design for mobile devices
