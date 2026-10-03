@@ -30,7 +30,7 @@ html {
 
 body {
   min-height: 100vh;
-  background-color: #dfdfdf;
+  background-color: #1f3041;
 }
 
 main {
@@ -38,7 +38,7 @@ main {
   background-color: white;
   margin: 0 auto;
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 #main-content {
@@ -51,29 +51,21 @@ header {
   justify-content: space-evenly;
 
   #header {
-    margin: auto 0;
+    align-content: center;
   }
 
   form {
-    display: flex;
-  }
-
-  #hamburger-menu-wrapper {
-    margin: auto 0;
+    align-content: center;
   }
 
   #hamburger-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 3rem;
+    align-content: center;
 
     .line {
+      padding: 1.5px;
       width: 3rem;
-      border: 1px solid black;
-      height: 0.4rem;
+      border: 2px solid white;
       background-color: black;
-      border-radius: 1rem;
     }
   }
 
@@ -84,7 +76,7 @@ header {
 }
 
 #logo {
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 #notice {
@@ -92,13 +84,11 @@ header {
 }
 
 #header {
-  display: flex;
-  flex-direction: column;
-  font-size: 3rem;
 }
 
 #menu {
-  border: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 #menu ul {
@@ -130,7 +120,7 @@ header {
 }
 
 @media only screen and (min-width: 1035px) {
-  #hamburger-menu-wrapper {
+  #hamburger-menu {
     display: none;
   }
 }
