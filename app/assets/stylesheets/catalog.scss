@@ -10,12 +10,17 @@
   h1 {
     margin: 1rem 0;
   }
+
+  a {
+    font-size: 17px;
+  }
 }
 
 #books {
   display: flex;
   justify-content: space-evenly;
   list-style: none;
+  flex-wrap: balance;
 
   button {
     margin: 1rem 0;

@@ -34,19 +34,6 @@ books_data = [
     position: 2
   },
   {
-    title: "Example Co-Authored Book",
-    authors: [
-      { first_name: "Jon", last_name: "Doe" },
-    ],
-    publisher: "Jon Doe publisher",
-    published_at: "2023-01-01",
-    isbn: "9781234567890",
-    blurb: "A book written by multiple Jon Doe.",
-    page_count: 300,
-    price: 24.99,
-    position: 3
-  },
-  {
     title: "Legacy",
     authors: [
       { first_name: "Robert", last_name: "Maxxim" },
@@ -57,7 +44,7 @@ books_data = [
     blurb: "Episode 1: The search for love.",
     page_count: 391,
     price: 19.99,
-    position: 4
+    position: 3
   },
   {
     title: "PODER DEL ALMA",
@@ -70,7 +57,7 @@ books_data = [
     blurb: "descubriendo el PODER DEL ALMA por medio de la meditacion",
     page_count: 206,
     price: 24.99,
-    position: 5
+    position: 4
   }
 ]
 
@@ -93,5 +80,48 @@ books_data.each do |data|
     b.page_count = data[:page_count]
     b.price = data[:price]
     b.position = data[:position]
+  end
+end
+
+example_books = [
+  {
+    title: "Example Co-Authored Book",
+    authors: [
+      { first_name: "Jon", last_name: "Doe" },
+    ],
+    publisher: "Jon Doe publisher",
+    published_at: "2023-01-01",
+    isbn: "9781234567890",
+    blurb: "A book written by multiple Jon Doe.",
+    page_count: 300,
+    price: 24.99,
+    position: 3
+  },
+]
+
+template = example_books.first
+
+100.times do |i|
+  index = i + 6
+  unique_title = "#{template[:title]} #{index}"
+  unique_isbn  = "#{template[:isbn].to_s.slice(0, 10) + index.to_s.rjust(3, '0')}"
+
+  publisher = Publisher.find_or_create_by!(name: template[:publisher])
+
+  author = template[:authors].map do |author_example|
+    Author.find_or_create_by!(
+      first_name: author_example[:first_name],
+      last_name: author_example[:last_name]
+    )
+  end
+
+  Book.find_or_create_by!(title: unique_title, isbn: unique_isbn) do |b|
+    b.publisher = publisher
+    b.authors = author
+    b.published_at = Time.zone.parse(template[:published_at])
+    b.blurb = template[:blurb]
+    b.page_count = template[:page_count]
+    b.price = template[:price]
+    b.position = index
   end
 end
