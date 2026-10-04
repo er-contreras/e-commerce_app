@@ -9,7 +9,6 @@ class CartController < ApplicationController
       flash[:cart_notice] = "Book added #{@item.book.title}"
       # The ajax request could respond with an html
       format.html { redirect_to catalog_index_path }
-      format.turbo_stream
     end
   end
 
