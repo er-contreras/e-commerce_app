@@ -99,15 +99,23 @@ header {
 }
 
 #menu li {
-  display: flex;
-  justify-content: space-around;
+  padding: 1rem 2rem;
+  border: 1px solid #cbcbcb;
+  box-shadow: -5px 5px 1px 1px rgba(0, 0, 0, 0.3); 
 }
 
 #menu a {
-  border: 1px solid #cdcdcd;
-  padding: 10px 20px;
-  text-align: center;
-  box-shadow: -5px 5px 1px 1px rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+}
+
+#content {
+  h1 {
+    color: brown;
+  }
+  
+  a {
+    // color: brown;
+  }
 }
 
 #footer {
@@ -132,14 +140,23 @@ header {
 
   #menu {
     display: none;
+    position: fixed;
+    background-color: white;
+
+    ul {
+      flex-direction: column-reverse;
+
+      li {
+        margin: 7px 0;
+      }
+    }
   }
 
   #content {
     border-top: 1px solid black;
 
     h1 {
-      color: brown;
-      font-size: 3rem;
+      font-size: 2em;
     }
   }
 

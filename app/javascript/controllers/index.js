@@ -12,3 +12,6 @@ application.register("droppable", DroppableController)
 
 import CartController from "./cart_controller"
 application.register("cart", CartController)
+
+import MenuController from "./menu_controller"
+application.register("menu", MenuController)
