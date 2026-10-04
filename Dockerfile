@@ -32,4 +32,4 @@ RUN yarn build:css && \
 
 EXPOSE 3001
 
-CMD ["bash", "-c", "bundle exec rails db:migrate && bundle exec puma -C config/puma.rb"]
+CMD ["bash", "-c", "bundle exec rails db:migrate db:seed && bundle exec puma -C config/puma.rb"]
