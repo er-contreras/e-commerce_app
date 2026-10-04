@@ -17,6 +17,7 @@
 @use "about";
 @use "cart";
 @use "catalog";
+@use "./admin/author";
 
 * {
   padding: 0;
@@ -108,23 +109,14 @@ header {
   font-size: 14px;
 }
 
-#content {
-  h1 {
-    color: brown;
-  }
-  
-  a {
-    // color: brown;
-  }
-}
-
 #footer {
   margin: 0 auto;
   max-width: 1120px;
   text-align: center;
-  padding: 0 6rem;
+  padding: 2rem 6rem;
   border-top: 1px solid black;
   background-color: white;
+  font-size: 2rem;
 }
 
 @media only screen and (min-width: 1035px) {
@@ -156,7 +148,7 @@ header {
     border-top: 1px solid black;
 
     h1 {
-      font-size: 2em;
+      // font-size: 2em;
     }
   }
 

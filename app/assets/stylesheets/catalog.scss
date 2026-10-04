@@ -9,10 +9,20 @@
 
   h1 {
     margin: 1rem 0;
+    font-size: 4rem;
+    color: brown;
   }
 
   a {
-    font-size: 17px;
+    // font-size: 17px;
+  }
+
+  #book_pages {
+    font-size: 2rem;
+
+    a {
+      color: #1d588b;
+    }
   }
 }
 
@@ -23,20 +33,39 @@
   flex-wrap: balance;
 
   button {
-    margin: 1rem 0;
-    color: black;
+    color: #c1c1c1;
     padding: 1rem;
+    background-color: #467185;
+    border: none;
+  }
+
+  dl {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    background-color: #1f3041;
+    color: #b38a3d;
+    padding: 0 1rem;
+
+    a {
+      color: #ffa905;
+      text-decoration: none;
+    }
   }
 }
 
 .book {
+  font-size: 2rem;
   border: 1px solid #cdcdcd;
   margin: 2rem;
   padding: 1rem;
   cursor: pointer;
   box-shadow: -11px 14px 6px 0px rgb(87 97 123 / 50%);
-  min-width: 24rem;
-  height: 30rem;
+  min-width: 27rem;
+  height: 35rem;
+  background-color: #4b3243;
+  max-width: 24rem;
 }
 
 // Responsive design for mobile devices
