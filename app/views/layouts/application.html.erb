@@ -15,31 +15,35 @@
     <header>
       <div id="header-wrapper">
         <div id="header">
-          <div>
-            <h1 id="logo">Dream<br> Library&trade;</h1>
+          <div  id="logo">
+            <h1>Dream<br> Library&trade;</h1>
           </div>
 
-          <%= render "layouts/search_box" %>
+          <div id="nav-searchbox-icon-menu">
+            <div id="nav-searchbox-hamburgermenu-icon">
+              <%= render "layouts/search_box" %>
 
-          <div id="hamburger-menu" data-controller="menu", data-action="click->menu#openMenu">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-          </div>
+              <div id="hamburger-menu" data-controller="menu", data-action="click->menu#openMenu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+              </div>
 
-          <div id="cart-icon" data-controller="cart" data-action="click->cart#openCart">
-            <%= render "shared/cart_icon" %>
+              <div id="cart-icon" data-controller="cart" data-action="click->cart#openCart">
+                <%= render "shared/cart_icon" %>
+              </div>
+            </div>
+          
+            <div id="menu">
+              <ul>
+                <li><a href="/admin/author">Authors</a></li>
+                <li><a href="/admin/publishers">Publishers</a></li>
+                <li><a href="/admin/books">Books</a></li>
+                <li><a href="/catalog/index">Catalog</a></li>
+                <li><a href="/about/index">About</a></li>
+              </ul>
+            </div>
           </div>
-        </div>
-        
-        <div id="menu">
-          <ul>
-            <li><a href="/admin/author">Authors</a></li>
-            <li><a href="/admin/publishers">Publishers</a></li>
-            <li><a href="/admin/books">Books</a></li>
-            <li><a href="/catalog/index">Catalog</a></li>
-            <li><a href="/about/index">About</a></li>
-          </ul>
         </div>
       </div>
     </header>

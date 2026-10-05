@@ -39,8 +39,6 @@ main {
   margin: 0 auto;
   display: flex;
   min-height: 100vh;
-  border-left: 1px solid #cbcbcb;
-  border-right: 1px solid #cbcbcb;
 }
 
 #main-content {
@@ -48,23 +46,38 @@ main {
 }
 
 header {
-  background-color: antiquewhite;
+  background-color: #1699b5;
 
   #header-wrapper {
-    border-left: 1px solid #cbcbcb;
-    border-right: 1px solid #cbcbcb;
     max-width: 1120px;
     margin: 0 auto;
-    border-bottom: 1px solid #cbcbcb;
   }
 
   #header {
     display: flex;
-    padding: 1rem;
+    padding: 1rem 5px;
+
+    #logo {
+      font-size: 1.5rem;
+      align-content: center;
+    }
+
+    #nav-searchbox-icon-menu {
+      width: 100%;
+
+      #nav-searchbox-hamburgermenu-icon {
+        display: flex;
+        justify-content: end;
+      }
+    }
   }
 
   form {
     align-content: center;
+
+    input {
+      padding: 5px;
+    }
   }
 
   #hamburger-menu {
@@ -81,12 +94,11 @@ header {
   #cart-icon {
     width: 3rem;
     cursor: pointer;
+    margin: 0 4rem 0 1rem;
   }
 }
 
-#logo {
-  font-size: 1rem;
-}
+
 
 #notice {
   padding: 5px;
@@ -97,15 +109,17 @@ header {
 
 #menu ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: end;
   list-style: none;
   padding: 1rem;
 }
 
 #menu li {
+  background-color: white;
+  margin: 0 3rem;
   padding: 1rem 2rem;
   border: 1px solid #cbcbcb;
-  box-shadow: -5px 5px 1px 1px rgba(0, 0, 0, 0.3); 
+  box-shadow: -1px 1px 1px 1px rgba(0, 0, 0, 0.3); 
 }
 
 #menu a {
@@ -129,8 +143,35 @@ header {
 }
 
 @media only screen and (max-width: 1035px) {
+  header #cart-icon {
+    margin: 0;
+  }
+
+  #hamburger-menu {
+    position: relative;
+    right: 5px;
+
+    .line {
+      padding: 1px !important;
+      border: 3px solid antiquewhite !important;
+    }
+  }
+
+  form {
+    position: relative;
+    right: 1rem;
+  }
+
+  #nav-searchbox-icon-menu {
+    align-content: center;
+  }
+
   #cart-icon {
     width: 3rem !important;
+  }
+
+  #logo {
+    font-size: 10px !important;
   }
 
   #menu {
