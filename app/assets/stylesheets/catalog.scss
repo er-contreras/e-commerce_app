@@ -37,6 +37,7 @@
     padding: 1rem;
     background-color: #467185;
     border: none;
+    cursor: pointer;
   }
 
   dl {
@@ -45,7 +46,7 @@
     justify-content: space-evenly;
     height: 100%;
     background-color: #1f3041;
-    color: #b38a3d;
+    color: #adadad;
     padding: 0 1rem;
 
     a {
@@ -57,14 +58,12 @@
 
 .book {
   font-size: 2rem;
-  border: 1px solid #cdcdcd;
+  border: 1px solid #7d7d7d;
   margin: 2rem;
-  padding: 1rem;
-  cursor: pointer;
+  padding: 3px;
   box-shadow: -11px 14px 6px 0px rgb(87 97 123 / 50%);
   min-width: 27rem;
   height: 35rem;
-  background-color: #4b3243;
   max-width: 24rem;
 }
 

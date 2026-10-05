@@ -12,46 +12,61 @@
   </head>
 
   <body>
-      <main>
-        <section id="main-content">
-          <header>
-            <div id="header">
-              <h1 id="logo">Dream<br> Library&trade;</h1>
-            </div>
-
-            <%= render "layouts/search_box" %>
-
-            <div id="hamburger-menu" data-controller="menu", data-action="click->menu#openMenu">
-              <div class="line"></div>
-              <div class="line"></div>
-              <div class="line"></div>
-            </div>
-
-      <div id="cart-icon" data-controller="cart" data-action="click->cart#openCart">
-        <%= render "shared/cart_icon" %>
-      </div>
-
-          <div id="content">
-            <h1><%= "#{@page_title}" if @page_title %></h1>
-            <% if flash[:notice] %>
-              <div id="notice">
-                <%= flash[:notice] %>
-              </div>
-            <% end %>
-
-            <%= yield %>
+    <header>
+      <div id="header-wrapper">
+        <div id="header">
+          <div>
+            <h1 id="logo">Dream<br> Library&trade;</h1>
           </div>
-        </section>
 
-        <% if @cart %>
-          <div id="shopping_cart">
-            <%= render partial: "cart/cart" %>
+          <%= render "layouts/search_box" %>
+
+          <div id="hamburger-menu" data-controller="menu", data-action="click->menu#openMenu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
           </div>
-        <% end %>
-      </main>
 
-      <div id="footer">
-        &copy; 2022-2023 Dream Library
+          <div id="cart-icon" data-controller="cart" data-action="click->cart#openCart">
+            <%= render "shared/cart_icon" %>
+          </div>
+        </div>
+        
+        <div id="menu">
+          <ul>
+            <li><a href="/admin/author">Authors</a></li>
+            <li><a href="/admin/publishers">Publishers</a></li>
+            <li><a href="/admin/books">Books</a></li>
+            <li><a href="/catalog/index">Catalog</a></li>
+            <li><a href="/about/index">About</a></li>
+          </ul>
+        </div>
       </div>
+    </header>
+
+    <main>
+      <section id="main-content">
+        <div id="content">
+          <h1><%= "#{@page_title}" if @page_title %></h1>
+          <% if flash[:notice] %>
+            <div id="notice">
+              <%= flash[:notice] %>
+            </div>
+          <% end %>
+
+          <%= yield %>
+        </div>
+      </section>
+
+      <% if @cart %>
+        <div id="shopping_cart">
+          <%= render partial: "cart/cart" %>
+        </div>
+      <% end %>
+    </main>
+
+    <div id="footer">
+      &copy; 2022-2023 Dream Library
+    </div>
   </body>
 </html>
