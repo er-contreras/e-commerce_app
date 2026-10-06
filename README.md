@@ -3,9 +3,14 @@ This repo holds a E-Commerce app that creates books and save it in a cart, you c
 so you can be able to buy them.
 
 ## 🔴 Live Demo
-> [!IMPORTANT] We are using Render free tier at the moment; please wait 50s until its fully loaded. \
-> 
-🚀 [E-Commerce App](https://e-commerce-app-1-croc.onrender.com/catalog/index/)
+> [!IMPORTANT]
+> We are using Render free tier at the moment; please wait 50s until it is fully loaded.
+
+---
+
+### 👉 **[Click here to view the E-Commerce App](https://e-commerce-app-1-croc.onrender.com/catalog/index/)**
+
+---
 
 ## Features implemented
 - [x] Implement the about user story
